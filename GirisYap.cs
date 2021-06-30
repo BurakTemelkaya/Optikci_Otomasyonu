@@ -22,7 +22,7 @@ namespace Optikci_Otomasyonu
         {
             SqlConnection baglan = new SqlConnection(con);
             baglan.Open();
-            string sorgu = "select Kullanici_Adi,Sifre from Kullanicilar where Kullanici_Adi='"+txtKullaniciAdi.Text+"' and Sifre='"+txtSifre.Text+"'";
+            string sorgu = "select Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='"+txtKullaniciAdi.Text+"' and Personel_Sifre='"+txtSifre.Text+"'";
             SqlCommand cmd = new SqlCommand(sorgu, baglan);
             SqlDataReader oku = cmd.ExecuteReader();
             if (oku.Read())

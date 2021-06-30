@@ -45,6 +45,7 @@ namespace Optikci_Otomasyonu
             this.nudStokSayisi = new System.Windows.Forms.NumericUpDown();
             this.btnResimDegistir = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.personelEKleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
@@ -133,6 +134,7 @@ namespace Optikci_Otomasyonu
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunEkleToolStripMenuItem,
+            this.personelEKleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -210,6 +212,13 @@ namespace Optikci_Otomasyonu
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // personelEKleToolStripMenuItem
+            // 
+            this.personelEKleToolStripMenuItem.Name = "personelEKleToolStripMenuItem";
+            this.personelEKleToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.personelEKleToolStripMenuItem.Text = "Personel EKle";
+            this.personelEKleToolStripMenuItem.Click += new System.EventHandler(this.personelEKleToolStripMenuItem_Click);
+            // 
             // Urunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -265,5 +274,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.NumericUpDown nudStokSayisi;
         private System.Windows.Forms.Button btnResimDegistir;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.ToolStripMenuItem personelEKleToolStripMenuItem;
     }
 }

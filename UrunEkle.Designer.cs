@@ -46,6 +46,7 @@ namespace Optikci_Otomasyonu
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
@@ -207,6 +208,7 @@ namespace Optikci_Otomasyonu
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunleriListeleGuncelleToolStripMenuItem,
+            this.personelEkleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -226,6 +228,13 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
+            // 
+            // personelEkleToolStripMenuItem
+            // 
+            this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
+            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
+            this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
             // 
             // UrunEkle
             // 
@@ -270,5 +279,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem urunleriListeleGuncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cikisYapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
     }
 }

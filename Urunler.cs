@@ -129,6 +129,14 @@ namespace Optikci_Otomasyonu
                 MessageBox.Show("Ürün Silindi");
                 baglan.Close();
             }
+            UrunleriListele();
+        }
+
+        private void personelEKleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelEkle personelEkle = new PersonelEkle();
+            this.Hide();
+            personelEkle.Show();
         }
 
         private void ResmiGuncelle(string eskiResim)

@@ -29,7 +29,7 @@ namespace Optikci_Otomasyonu
         //@"~Resimler\
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
-            if (txtAdi.Text!="" && nudFiyati.Value!= 0 && nudStokSayisi.Value!= 0 && txtDetay.Text!="" && pbResim.Image!=null)
+            if (txtAdi.Text!="" && nudFiyati.Value!= 0 && nudStokSayisi.Value!= 0 && pbResim.Image!=null)
             {
                 ResmiKaydet();
                 string sorgu = "insert into Urunler(Urun_Adi,Urun_Fiyati,Urun_Stok_Sayisi,Urun_Detay,Urun_Fotograf,Urun_Eklenme_Tarihi)" +
@@ -99,6 +99,13 @@ namespace Optikci_Otomasyonu
             Urunler urunler = new Urunler();
             this.Hide();
             urunler.Show();
+        }
+
+        private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelEkle personelEkle = new PersonelEkle();
+            this.Hide();
+            personelEkle.Show();
         }
     }
 }
