@@ -26,7 +26,21 @@ namespace Optikci_Otomasyonu
 
         private void Urunler_Load(object sender, EventArgs e)
         {
-            UrunleriListele();            
+            UrunleriListele();
+            FormIslemleri formIslemleri = new FormIslemleri();
+            urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+
+            urunEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunEkleOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
+            personelEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonelEkleOpen);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonellerOpen);
+        }
+        private void FormuKapat(object s, EventArgs e)
+        {
+            this.Hide();
         }
         private void UrunleriListele()
         {
@@ -43,26 +57,7 @@ namespace Optikci_Otomasyonu
                 dgvDegerler.DataSource = ds.Tables[0];
             }
             baglan.Close();
-        }
-
-        private void urunEkleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UrunEkle urunEkle = new UrunEkle();
-            this.Hide();
-            urunEkle.Show();
-        }
-
-        private void urunleriListeleGuncelleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Urunler urunler = new Urunler();
-            this.Hide();
-            urunler.Show();
-        }
-
-        private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        }       
         int ID;
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -154,6 +149,10 @@ namespace Optikci_Otomasyonu
         private void ResmiSil(string eskiResim)
         {
             File.Delete(eskiResim);//resmi sildirme
+        }
+        private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

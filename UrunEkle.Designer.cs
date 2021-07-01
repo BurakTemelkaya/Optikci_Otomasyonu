@@ -46,7 +46,9 @@ namespace Optikci_Otomasyonu
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
@@ -208,7 +210,9 @@ namespace Optikci_Otomasyonu
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunleriListeleGuncelleToolStripMenuItem,
+            this.urunSatisiToolStripMenuItem,
             this.personelEkleToolStripMenuItem,
+            this.personelListeleGuncelleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -221,20 +225,31 @@ namespace Optikci_Otomasyonu
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
             this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(148, 20);
             this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
-            this.urunleriListeleGuncelleToolStripMenuItem.Click += new System.EventHandler(this.urunleriListeleGuncelleToolStripMenuItem_Click);
             // 
             // personelEkleToolStripMenuItem
             // 
             this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
             this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
-            this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
+            // 
+            // personelListeleGuncelleToolStripMenuItem
+            // 
+            this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
             // 
             // cikisYapToolStripMenuItem
             // 
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
+            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
+            // 
+            // urunSatisiToolStripMenuItem
+            // 
+            this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
+            this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
             // 
             // UrunEkle
             // 
@@ -248,6 +263,7 @@ namespace Optikci_Otomasyonu
             this.Name = "UrunEkle";
             this.Text = "Ürun Ekle";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UrunEkle_FormClosing);
+            this.Load += new System.EventHandler(this.UrunEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
@@ -280,5 +296,7 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem urunleriListeleGuncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cikisYapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personelListeleGuncelleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunSatisiToolStripMenuItem;
     }
 }

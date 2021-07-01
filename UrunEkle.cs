@@ -91,18 +91,27 @@ namespace Optikci_Otomasyonu
             Application.Exit();
         }
 
-        private void urunleriListeleGuncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Urunler urunler = new Urunler();
-            this.Hide();
-            urunler.Show();
+            Application.Exit();
         }
 
-        private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UrunEkle_Load(object sender, EventArgs e)
         {
-            PersonelEkle personelEkle = new PersonelEkle();
+            FormIslemleri formIslemleri = new FormIslemleri();
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunlerOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
+            personelEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonelEkleOpen);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonellerOpen);
+        }
+        private void FormuKapat(object s, EventArgs e)
+        {
             this.Hide();
-            personelEkle.Show();
         }
     }
 }

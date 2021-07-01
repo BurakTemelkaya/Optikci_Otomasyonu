@@ -20,6 +20,20 @@ namespace Optikci_Otomasyonu
         private void Personeller_Load(object sender, EventArgs e)
         {
             PersonelleriListele();
+            FormIslemleri formIslemleri = new FormIslemleri();
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunlerOpen);
+            urunEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunEkleOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
+            personelEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonelEkleOpen);
+        }
+        private void FormuKapat(object s, EventArgs e)
+        {
+            this.Hide();
         }
         private void PersonelleriListele()
         {
@@ -75,6 +89,11 @@ namespace Optikci_Otomasyonu
             {
                 MessageBox.Show("Lütfen Kayıt Seçiniz");
             }
+        }
+
+        private void Personeller_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

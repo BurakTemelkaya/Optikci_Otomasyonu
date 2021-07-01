@@ -36,21 +36,23 @@ namespace Optikci_Otomasyonu
             this.txtDetay = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelEKleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbResim = new System.Windows.Forms.PictureBox();
             this.nudFiyati = new System.Windows.Forms.NumericUpDown();
             this.nudStokSayisi = new System.Windows.Forms.NumericUpDown();
             this.btnResimDegistir = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.dgvDegerler = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStokSayisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -116,39 +118,6 @@ namespace Optikci_Otomasyonu
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.urunEkleToolStripMenuItem,
-            this.personelEKleToolStripMenuItem,
-            this.cikisYapToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(966, 24);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // urunEkleToolStripMenuItem
-            // 
-            this.urunEkleToolStripMenuItem.Name = "urunEkleToolStripMenuItem";
-            this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.urunEkleToolStripMenuItem.Text = "Ürün Ekle";
-            this.urunEkleToolStripMenuItem.Click += new System.EventHandler(this.urunEkleToolStripMenuItem_Click);
-            // 
-            // personelEKleToolStripMenuItem
-            // 
-            this.personelEKleToolStripMenuItem.Name = "personelEKleToolStripMenuItem";
-            this.personelEKleToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
-            this.personelEKleToolStripMenuItem.Text = "Personel EKle";
-            this.personelEKleToolStripMenuItem.Click += new System.EventHandler(this.personelEKleToolStripMenuItem_Click);
-            // 
-            // cikisYapToolStripMenuItem
-            // 
-            this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
-            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
             // 
             // pbResim
             // 
@@ -218,11 +187,56 @@ namespace Optikci_Otomasyonu
             this.dgvDegerler.TabIndex = 35;
             this.dgvDegerler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDegerler_CellClick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.urunEkleToolStripMenuItem,
+            this.urunSatisiToolStripMenuItem,
+            this.personelEkleToolStripMenuItem,
+            this.personelListeleGuncelleToolStripMenuItem,
+            this.cikisYapToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(966, 24);
+            this.menuStrip1.TabIndex = 36;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // urunSatisiToolStripMenuItem
+            // 
+            this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
+            this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
+            // 
+            // personelEkleToolStripMenuItem
+            // 
+            this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
+            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
+            // 
+            // personelListeleGuncelleToolStripMenuItem
+            // 
+            this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
+            // 
+            // cikisYapToolStripMenuItem
+            // 
+            this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
+            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
+            // 
+            // urunEkleToolStripMenuItem
+            // 
+            this.urunEkleToolStripMenuItem.Name = "urunEkleToolStripMenuItem";
+            this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.urunEkleToolStripMenuItem.Text = "Ürün Ekle";
+            // 
             // Urunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 911);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvDegerler);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnResimDegistir);
@@ -236,20 +250,18 @@ namespace Optikci_Otomasyonu
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Urunler";
             this.Text = "Urunler";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Urunler_FormClosing);
             this.Load += new System.EventHandler(this.Urunler_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStokSayisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,15 +275,17 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.TextBox txtDetay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem urunEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cikisYapToolStripMenuItem;
         private System.Windows.Forms.PictureBox pbResim;
         private System.Windows.Forms.NumericUpDown nudFiyati;
         private System.Windows.Forms.NumericUpDown nudStokSayisi;
         private System.Windows.Forms.Button btnResimDegistir;
         private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.ToolStripMenuItem personelEKleToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvDegerler;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem urunSatisiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personelListeleGuncelleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cikisYapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunEkleToolStripMenuItem;
     }
 }

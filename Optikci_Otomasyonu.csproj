@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormIslemleri.cs" />
     <Compile Include="GirisYap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,12 @@
     <Compile Include="Urunler.Designer.cs">
       <DependentUpon>Urunler.cs</DependentUpon>
     </Compile>
+    <Compile Include="UrunSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunSatis.Designer.cs">
+      <DependentUpon>UrunSatis.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GirisYap.resx">
       <DependentUpon>GirisYap.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Urunler.resx">
       <DependentUpon>Urunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunSatis.resx">
+      <DependentUpon>UrunSatis.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

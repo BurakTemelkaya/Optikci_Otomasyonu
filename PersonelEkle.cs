@@ -20,6 +20,19 @@ namespace Optikci_Otomasyonu
         private void PersonelEkle_Load(object sender, EventArgs e)
         {
             cbbMeslegi.SelectedIndex = 0;
+            FormIslemleri formIslemleri = new FormIslemleri();
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunlerOpen);
+            urunEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunEkleOpen);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonellerOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
+        }
+        private void FormuKapat(object s, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void btnPersonelEkle_Click(object sender, EventArgs e)
@@ -64,23 +77,11 @@ namespace Optikci_Otomasyonu
             cbbMeslegi.SelectedIndex = 0;
             nudMaas.Value = 0;
         }
-        private void urunEkleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Urunler urunler = new Urunler();
-            this.Hide();
-            urunler.Show();
-        }
-
-        private void urunleriListeleGuncelleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Urunler urunler = new Urunler();
-            this.Hide();
-            urunler.Show();
-        }
-
         private void PersonelEkle_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+        
     }
 }
