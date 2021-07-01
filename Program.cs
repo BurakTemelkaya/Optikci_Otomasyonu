@@ -15,7 +15,7 @@ namespace Optikci_Otomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PersonelEkle());
+            Application.Run(new GirisYap());
         }
     }
 }

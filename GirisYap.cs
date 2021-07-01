@@ -16,14 +16,13 @@ namespace Optikci_Otomasyonu
         {
             InitializeComponent();
         }
-        string con = @"Data Source=DESKTOP-899RAQ8\SQLEXPRESS;Initial Catalog=Optikci;Integrated Security=True";
         int hak;
+        SqlBaglantisi baglan = new SqlBaglantisi();
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            SqlConnection baglan = new SqlConnection(con);
-            baglan.Open();
             string sorgu = "select Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='"+txtKullaniciAdi.Text+"' and Personel_Sifre='"+txtSifre.Text+"'";
-            SqlCommand cmd = new SqlCommand(sorgu, baglan);
+            SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
+            baglan.Open();
             SqlDataReader oku = cmd.ExecuteReader();
             if (oku.Read())
             {

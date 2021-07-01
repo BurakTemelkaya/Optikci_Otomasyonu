@@ -17,19 +17,19 @@ namespace Optikci_Otomasyonu
         {
             InitializeComponent();
         }
-        SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-899RAQ8\SQLEXPRESS; Initial Catalog = Optikci; Integrated Security = True");
+        SqlBaglantisi baglan = new SqlBaglantisi();
         string resimYolu;
         private void btnResimEkle_Click(object sender, EventArgs e)
         {
             OpenFileDialog resim = new OpenFileDialog();
             resim.Filter = "Tüm dosyalar | *.*";
             resim.ShowDialog();
-            pbResim.ImageLocation = resim.FileName;            
+            pbResim.ImageLocation = resim.FileName;
         }
         //@"~Resimler\
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
-            if (txtAdi.Text!="" && nudFiyati.Value!= 0 && nudStokSayisi.Value!= 0 && pbResim.Image!=null)
+            if (txtAdi.Text != "" && nudFiyati.Value != 0 && nudStokSayisi.Value != 0 && pbResim.Image != null)
             {
                 ResmiKaydet();
                 string sorgu = "insert into Urunler(Urun_Adi,Urun_Fiyati,Urun_Stok_Sayisi,Urun_Detay,Urun_Fotograf,Urun_Eklenme_Tarihi)" +
@@ -42,7 +42,7 @@ namespace Optikci_Otomasyonu
             {
                 MessageBox.Show("Ürün Eklenemedi Girilen Değerlerden Herhangi Biri Boş Olamaz");
             }
-            
+
         }
         private void ResmiKaydet()
         {
@@ -52,23 +52,20 @@ namespace Optikci_Otomasyonu
             string hedef = Application.StartupPath + @"\Resimler\";
             string yeniad = Guid.NewGuid() + dosyaAdi; //Benzersiz isim verme
             File.Copy(kaynak, hedef + yeniad);
-            resimYolu =  @"\Resimler\" + yeniad;//veritabanına kaydedilecek resmin ismi
+            resimYolu = @"\Resimler\" + yeniad;//veritabanına kaydedilecek resmin ismi
         }
         private void KayitIslemi(string sorgu)
         {
-            SqlCommand cmd = new SqlCommand(sorgu, baglan);
+            SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
             cmd.Parameters.AddWithValue("@Urun_Adi", txtAdi.Text);
             cmd.Parameters.AddWithValue("@Urun_Fiyati", nudFiyati.Value);
             cmd.Parameters.AddWithValue("@Urun_Stok_Sayisi", nudStokSayisi.Value);
             cmd.Parameters.AddWithValue("@Urun_Detay", txtDetay.Text);
             cmd.Parameters.AddWithValue("@Urun_Fotograf", resimYolu);
             cmd.Parameters.AddWithValue("@Urun_Eklenme_Tarihi", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-            if (baglan.State == ConnectionState.Closed)
-            {
-                baglan.Open();
-            }
+            baglan.Open();
             cmd.ExecuteNonQuery();
-            baglan.Close();            
+            baglan.Close();
         }
         private void Temizle()
         {
@@ -76,12 +73,12 @@ namespace Optikci_Otomasyonu
             nudFiyati.Value = 0;
             nudStokSayisi.Value = 0;
             txtDetay.Clear();
-            if (pbResim.Image!=null)
+            if (pbResim.Image != null)
             {
                 pbResim.Image.Dispose();
                 pbResim.Image = null;
             }
-            
+
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)

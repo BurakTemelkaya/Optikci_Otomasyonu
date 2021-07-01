@@ -16,8 +16,7 @@ namespace Optikci_Otomasyonu
         {
             InitializeComponent();
         }
-        SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-899RAQ8\SQLEXPRESS; Initial Catalog = Optikci; Integrated Security = True");
-
+        SqlBaglantisi baglan = new SqlBaglantisi();
         private void PersonelEkle_Load(object sender, EventArgs e)
         {
             cbbMeslegi.SelectedIndex = 0;
@@ -42,7 +41,7 @@ namespace Optikci_Otomasyonu
 
         private void KayitIslemi(string sorgu)
         {
-            SqlCommand cmd = new SqlCommand(sorgu, baglan);
+            SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
             cmd.Parameters.AddWithValue("@Personel_Kullanici_Adi", txtKullaniciAdi.Text);
             cmd.Parameters.AddWithValue("@Personel_Sifre", txtSifre.Text);
             cmd.Parameters.AddWithValue("@Personel_Adi", txtAdi.Text);            
@@ -50,10 +49,7 @@ namespace Optikci_Otomasyonu
             cmd.Parameters.AddWithValue("@Personel_Meslek", cbbMeslegi.SelectedItem.ToString());
             cmd.Parameters.AddWithValue("@Personel_Maas", nudMaas.Value);
             cmd.Parameters.AddWithValue("@Personel_Giris_Tarihi", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-            if (baglan.State == ConnectionState.Closed)
-            {
-                baglan.Open();
-            }
+            baglan.Open();
             cmd.ExecuteNonQuery();
             baglan.Close();
             MessageBox.Show("Personel Ekleme İşlemi Başarıyla Tamamlandı.");

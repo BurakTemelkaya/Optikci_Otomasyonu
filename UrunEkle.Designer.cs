@@ -45,8 +45,8 @@ namespace Optikci_Otomasyonu
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
@@ -223,18 +223,18 @@ namespace Optikci_Otomasyonu
             this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
             this.urunleriListeleGuncelleToolStripMenuItem.Click += new System.EventHandler(this.urunleriListeleGuncelleToolStripMenuItem_Click);
             // 
-            // cikisYapToolStripMenuItem
-            // 
-            this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
-            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            // 
             // personelEkleToolStripMenuItem
             // 
             this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
             this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
+            // 
+            // cikisYapToolStripMenuItem
+            // 
+            this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
+            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
             // 
             // UrunEkle
             // 
