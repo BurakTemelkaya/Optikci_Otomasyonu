@@ -20,16 +20,15 @@ namespace Optikci_Otomasyonu
         private void Personeller_Load(object sender, EventArgs e)
         {
             PersonelleriListele();
-            FormIslemleri formIslemleri = new FormIslemleri();
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
 
-            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunlerOpen);
-            urunEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunEkleOpen);
-            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
-            personelEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonelEkleOpen);
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
+            urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
         }
         private void FormuKapat(object s, EventArgs e)
         {
@@ -57,17 +56,17 @@ namespace Optikci_Otomasyonu
             {
                 ID = Convert.ToInt32(item.Cells[0].Value);
                 txtKullaniciAdi.Text = item.Cells[1].Value.ToString();
-                txtSifre.Text= item.Cells[2].Value.ToString();
+                txtSifre.Text = item.Cells[2].Value.ToString();
                 txtAdi.Text = item.Cells[3].Value.ToString();
-                txtSoyad.Text= item.Cells[4].Value.ToString();
+                txtSoyad.Text = item.Cells[4].Value.ToString();
                 cbbMeslegi.Text = item.Cells[5].Value.ToString();
-                nudMaas.Value= Convert.ToDecimal(item.Cells[6].Value);
+                nudMaas.Value = Convert.ToDecimal(item.Cells[6].Value);
             }
         }
 
         private void btnPersonelGuncelle_Click(object sender, EventArgs e)
         {
-            if (ID != 0)
+            if (ID != 0 && txtKullaniciAdi.Text != "" && txtSifre.Text != "" && txtSoyad.Text != "" && nudMaas.Value != 0)
             {
                 string s = "update Personeller set Personel_Kullanici_Adi=@Personel_Kullanici_Adi,Personel_Sifre=@Personel_Sifre," +
                 "Personel_Adi=@Personel_Adi,Personel_Soyad=@Personel_Soyad,Personel_Meslek=@Personel_Meslek," +
@@ -85,13 +84,22 @@ namespace Optikci_Otomasyonu
                 MessageBox.Show("Güncelleme İşlemi Başarılı");
                 PersonelleriListele();
             }
-            else
+            else if (ID == 0)
             {
                 MessageBox.Show("Lütfen Kayıt Seçiniz");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Değerleri Boş Bırakmayınız.");
             }
         }
 
         private void Personeller_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

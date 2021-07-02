@@ -47,9 +47,9 @@ namespace Optikci_Otomasyonu
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -238,6 +238,12 @@ namespace Optikci_Otomasyonu
             this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
             this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle/Sil";
             // 
+            // urunSatisiToolStripMenuItem
+            // 
+            this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
+            this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
+            // 
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
@@ -249,12 +255,7 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            // 
-            // urunSatisiToolStripMenuItem
-            // 
-            this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
-            this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
+            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
             // 
             // PersonelEkle
             // 

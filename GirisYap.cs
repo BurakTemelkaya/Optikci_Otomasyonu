@@ -17,15 +17,17 @@ namespace Optikci_Otomasyonu
             InitializeComponent();
         }
         int hak;
+        public static int Personel_ID;
         SqlBaglantisi baglan = new SqlBaglantisi();
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            string sorgu = "select Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='"+txtKullaniciAdi.Text+"' and Personel_Sifre='"+txtSifre.Text+"'";
+            string sorgu = "select ID,Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='"+txtKullaniciAdi.Text+"' and Personel_Sifre='"+txtSifre.Text+"'";
             SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
             baglan.Open();
             SqlDataReader oku = cmd.ExecuteReader();
             if (oku.Read())
             {
+                Personel_ID = Convert.ToInt32(oku[0]);
                 Urunler urunler = new Urunler();                
                 urunler.Show();
                 this.Hide();

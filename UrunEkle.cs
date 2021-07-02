@@ -98,16 +98,15 @@ namespace Optikci_Otomasyonu
 
         private void UrunEkle_Load(object sender, EventArgs e)
         {
-            FormIslemleri formIslemleri = new FormIslemleri();
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
 
-            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunlerOpen);
-            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
-            personelEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonelEkleOpen);
-            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonellerOpen);
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
         }
         private void FormuKapat(object s, EventArgs e)
         {

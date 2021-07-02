@@ -47,8 +47,8 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -244,17 +244,18 @@ namespace Optikci_Otomasyonu
             this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             // 
-            // cikisYapToolStripMenuItem
-            // 
-            this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
-            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            // 
             // urunSatisiToolStripMenuItem
             // 
             this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
+            // 
+            // cikisYapToolStripMenuItem
+            // 
+            this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
+            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
+            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
             // 
             // Personeller
             // 

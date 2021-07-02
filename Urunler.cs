@@ -27,16 +27,15 @@ namespace Optikci_Otomasyonu
         private void Urunler_Load(object sender, EventArgs e)
         {
             UrunleriListele();
-            FormIslemleri formIslemleri = new FormIslemleri();
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
 
-            urunEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunEkleOpen);
-            urunSatisiToolStripMenuItem.Click += new EventHandler(formIslemleri.UrunSatisOpen);
-            personelEkleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonelEkleOpen);
-            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(formIslemleri.PersonellerOpen);
+            urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
+            urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
         }
         private void FormuKapat(object s, EventArgs e)
         {
@@ -150,7 +149,8 @@ namespace Optikci_Otomasyonu
         {
             File.Delete(eskiResim);//resmi sildirme
         }
-        private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void cikisYapToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }

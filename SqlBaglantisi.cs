@@ -22,6 +22,6 @@ namespace Optikci_Otomasyonu
             baglan.Close();
         }
         //SqlBaglantisi class'ı sayesinde projemiz başka bir bilgisayara yüklendiğinde
-        //veritabanının yerini sadece bir kez yazarak bütün projede değişmesini sağlıyoruz.
+        //veritabanının konumunu sadece bir kez yazarak bütün projede değişmesini sağlıyoruz.
     }
 }
