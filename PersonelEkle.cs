@@ -21,13 +21,17 @@ namespace Optikci_Otomasyonu
         {
             cbbMeslegi.SelectedIndex = 0;
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);            
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
-            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
+            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
+
         }
         private void FormuKapat(object s, EventArgs e)
         {

@@ -48,6 +48,7 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
@@ -218,6 +219,7 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
             this.urunSatisiToolStripMenuItem,
+            this.urunSatisGrafikleriToolStripMenuItem,
             this.personelListeleGuncelleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -244,6 +246,12 @@ namespace Optikci_Otomasyonu
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
             // 
+            // urunSatisGrafikleriToolStripMenuItem
+            // 
+            this.urunSatisGrafikleriToolStripMenuItem.Name = "urunSatisGrafikleriToolStripMenuItem";
+            this.urunSatisGrafikleriToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.urunSatisGrafikleriToolStripMenuItem.Text = "Ürün Satış Grafikleri";
+            // 
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
@@ -267,6 +275,7 @@ namespace Optikci_Otomasyonu
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PersonelEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonelEkle";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PersonelEkle_FormClosing);
             this.Load += new System.EventHandler(this.PersonelEkle_Load);
@@ -303,5 +312,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem urunleriListeleGuncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelListeleGuncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem urunSatisiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
     }
 }

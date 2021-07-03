@@ -32,6 +32,7 @@ namespace Optikci_Otomasyonu
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEKleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +67,7 @@ namespace Optikci_Otomasyonu
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
+            this.urunSatisGrafikleriToolStripMenuItem,
             this.personelEKleToolStripMenuItem,
             this.personelListeleGuncelleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
@@ -87,6 +89,12 @@ namespace Optikci_Otomasyonu
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
             this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(148, 19);
             this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
+            // 
+            // urunSatisGrafikleriToolStripMenuItem
+            // 
+            this.urunSatisGrafikleriToolStripMenuItem.Name = "urunSatisGrafikleriToolStripMenuItem";
+            this.urunSatisGrafikleriToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.urunSatisGrafikleriToolStripMenuItem.Text = "Ürün Satış Grafikleri";
             // 
             // personelEKleToolStripMenuItem
             // 
@@ -149,7 +157,7 @@ namespace Optikci_Otomasyonu
             this.txtDetay.Location = new System.Drawing.Point(53, 647);
             this.txtDetay.Multiline = true;
             this.txtDetay.Name = "txtDetay";
-            this.txtDetay.Size = new System.Drawing.Size(473, 156);
+            this.txtDetay.Size = new System.Drawing.Size(473, 164);
             this.txtDetay.TabIndex = 38;
             this.txtDetay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -307,6 +315,7 @@ namespace Optikci_Otomasyonu
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UrunSatis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürun Satışı";
             this.Load += new System.EventHandler(this.UrunSatis_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -347,5 +356,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSatilacakMusterininAdi;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
     }
 }

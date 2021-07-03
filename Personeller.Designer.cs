@@ -44,11 +44,14 @@ namespace Optikci_Otomasyonu
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDegerler = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTxtPersonelAra = new System.Windows.Forms.ToolStripTextBox();
+            this.sifirlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -57,19 +60,19 @@ namespace Optikci_Otomasyonu
             // btnPersonelGuncelle
             // 
             this.btnPersonelGuncelle.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPersonelGuncelle.Location = new System.Drawing.Point(512, 641);
+            this.btnPersonelGuncelle.Location = new System.Drawing.Point(384, 643);
             this.btnPersonelGuncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPersonelGuncelle.Name = "btnPersonelGuncelle";
-            this.btnPersonelGuncelle.Size = new System.Drawing.Size(244, 78);
+            this.btnPersonelGuncelle.Size = new System.Drawing.Size(244, 60);
             this.btnPersonelGuncelle.TabIndex = 21;
-            this.btnPersonelGuncelle.Text = "Personel Güncelle";
+            this.btnPersonelGuncelle.Text = "Personeli Güncelle";
             this.btnPersonelGuncelle.UseVisualStyleBackColor = false;
             this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
             // 
             // nudMaas
             // 
             this.nudMaas.DecimalPlaces = 2;
-            this.nudMaas.Location = new System.Drawing.Point(841, 595);
+            this.nudMaas.Location = new System.Drawing.Point(662, 593);
             this.nudMaas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nudMaas.Maximum = new decimal(new int[] {
             100000,
@@ -77,7 +80,7 @@ namespace Optikci_Otomasyonu
             0,
             0});
             this.nudMaas.Name = "nudMaas";
-            this.nudMaas.Size = new System.Drawing.Size(327, 26);
+            this.nudMaas.Size = new System.Drawing.Size(285, 26);
             this.nudMaas.TabIndex = 20;
             this.nudMaas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudMaas.ThousandsSeparator = true;
@@ -85,7 +88,7 @@ namespace Optikci_Otomasyonu
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(981, 541);
+            this.label7.Location = new System.Drawing.Point(774, 542);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 20);
@@ -95,7 +98,7 @@ namespace Optikci_Otomasyonu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(577, 543);
+            this.label6.Location = new System.Drawing.Point(465, 543);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
@@ -117,25 +120,25 @@ namespace Optikci_Otomasyonu
             "Pazarlama Uzmanı",
             "İnsan Kaynakları Müdürü",
             "İnsan Kaynakları Uzmanı"});
-            this.cbbMeslegi.Location = new System.Drawing.Point(464, 593);
+            this.cbbMeslegi.Location = new System.Drawing.Point(360, 593);
             this.cbbMeslegi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbMeslegi.Name = "cbbMeslegi";
-            this.cbbMeslegi.Size = new System.Drawing.Size(325, 28);
+            this.cbbMeslegi.Size = new System.Drawing.Size(283, 28);
             this.cbbMeslegi.TabIndex = 18;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(843, 489);
+            this.txtSoyad.Location = new System.Drawing.Point(664, 494);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(325, 26);
+            this.txtSoyad.Size = new System.Drawing.Size(283, 26);
             this.txtSoyad.TabIndex = 15;
             this.txtSoyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(975, 437);
+            this.label4.Location = new System.Drawing.Point(774, 438);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
@@ -144,17 +147,17 @@ namespace Optikci_Otomasyonu
             // 
             // txtAdi
             // 
-            this.txtAdi.Location = new System.Drawing.Point(464, 492);
+            this.txtAdi.Location = new System.Drawing.Point(360, 494);
             this.txtAdi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAdi.Name = "txtAdi";
-            this.txtAdi.Size = new System.Drawing.Size(325, 26);
+            this.txtAdi.Size = new System.Drawing.Size(283, 26);
             this.txtAdi.TabIndex = 14;
             this.txtAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(594, 439);
+            this.label5.Location = new System.Drawing.Point(482, 439);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 20);
@@ -163,18 +166,18 @@ namespace Optikci_Otomasyonu
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(59, 593);
+            this.txtSifre.Location = new System.Drawing.Point(32, 595);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(325, 26);
+            this.txtSifre.Size = new System.Drawing.Size(283, 26);
             this.txtSifre.TabIndex = 17;
             this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(195, 541);
+            this.label3.Location = new System.Drawing.Point(139, 543);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
@@ -183,17 +186,17 @@ namespace Optikci_Otomasyonu
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(59, 492);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(32, 494);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(325, 26);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(283, 26);
             this.txtKullaniciAdi.TabIndex = 13;
             this.txtKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(167, 437);
+            this.label1.Location = new System.Drawing.Point(117, 439);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
@@ -208,60 +211,87 @@ namespace Optikci_Otomasyonu
             this.dgvDegerler.Location = new System.Drawing.Point(27, 27);
             this.dgvDegerler.Name = "dgvDegerler";
             this.dgvDegerler.ReadOnly = true;
-            this.dgvDegerler.Size = new System.Drawing.Size(1204, 397);
+            this.dgvDegerler.Size = new System.Drawing.Size(945, 397);
             this.dgvDegerler.TabIndex = 36;
             this.dgvDegerler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDegerler_CellClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personelEkleToolStripMenuItem,
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
-            this.personelEkleToolStripMenuItem,
             this.urunSatisiToolStripMenuItem,
-            this.cikisYapToolStripMenuItem});
+            this.urunSatisGrafikleriToolStripMenuItem,
+            this.cikisYapToolStripMenuItem,
+            this.toolStripTxtPersonelAra,
+            this.sifirlaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1243, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 27);
             this.menuStrip1.TabIndex = 37;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // personelEkleToolStripMenuItem
+            // 
+            this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
+            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
+            this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             // 
             // urunEkleToolStripMenuItem
             // 
             this.urunEkleToolStripMenuItem.Name = "urunEkleToolStripMenuItem";
-            this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.urunEkleToolStripMenuItem.Text = "Ürün Ekle";
             // 
             // urunleriListeleGuncelleToolStripMenuItem
             // 
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(165, 23);
             this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle/Sil";
-            // 
-            // personelEkleToolStripMenuItem
-            // 
-            this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
-            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             // 
             // urunSatisiToolStripMenuItem
             // 
             this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
-            this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 23);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
+            // 
+            // urunSatisGrafikleriToolStripMenuItem
+            // 
+            this.urunSatisGrafikleriToolStripMenuItem.Name = "urunSatisGrafikleriToolStripMenuItem";
+            this.urunSatisGrafikleriToolStripMenuItem.Size = new System.Drawing.Size(122, 23);
+            this.urunSatisGrafikleriToolStripMenuItem.Text = "Ürün Satış Grafikleri";
             // 
             // cikisYapToolStripMenuItem
             // 
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
-            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
             this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
+            // 
+            // toolStripTxtPersonelAra
+            // 
+            this.toolStripTxtPersonelAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.toolStripTxtPersonelAra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTxtPersonelAra.Name = "toolStripTxtPersonelAra";
+            this.toolStripTxtPersonelAra.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTxtPersonelAra.Text = "Personel Ara";
+            this.toolStripTxtPersonelAra.Leave += new System.EventHandler(this.toolStripTxtPersonelAra_Leave);
+            this.toolStripTxtPersonelAra.Click += new System.EventHandler(this.toolStripTxtPersonelAra_Click);
+            this.toolStripTxtPersonelAra.TextChanged += new System.EventHandler(this.toolStripTxtPersonelAra_TextChanged);
+            // 
+            // sifirlaToolStripMenuItem
+            // 
+            this.sifirlaToolStripMenuItem.Name = "sifirlaToolStripMenuItem";
+            this.sifirlaToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
+            this.sifirlaToolStripMenuItem.Text = "Sıfırla";
+            this.sifirlaToolStripMenuItem.Click += new System.EventHandler(this.sifirlaToolStripMenuItem_Click);
             // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 734);
+            this.ClientSize = new System.Drawing.Size(984, 716);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvDegerler);
             this.Controls.Add(this.btnPersonelGuncelle);
@@ -280,6 +310,7 @@ namespace Optikci_Otomasyonu
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Personeller";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personeller";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Personeller_FormClosing);
             this.Load += new System.EventHandler(this.Personeller_Load);
@@ -313,5 +344,8 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem cikisYapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem urunSatisiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTxtPersonelAra;
+        private System.Windows.Forms.ToolStripMenuItem sifirlaToolStripMenuItem;
     }
 }

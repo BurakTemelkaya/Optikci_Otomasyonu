@@ -34,11 +34,13 @@ namespace Optikci_Otomasyonu
             this.label2 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGirisYap = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(113, 97);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(55, 73);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(6);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(196, 30);
@@ -48,7 +50,7 @@ namespace Optikci_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(150, 51);
+            this.label1.Location = new System.Drawing.Point(92, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 25);
@@ -58,7 +60,7 @@ namespace Optikci_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(181, 157);
+            this.label2.Location = new System.Drawing.Point(123, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 25);
@@ -67,7 +69,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(113, 203);
+            this.txtSifre.Location = new System.Drawing.Point(55, 179);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(6);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
@@ -77,7 +79,7 @@ namespace Optikci_Otomasyonu
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.Location = new System.Drawing.Point(113, 262);
+            this.btnGirisYap.Location = new System.Drawing.Point(55, 238);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(196, 41);
             this.btnGirisYap.TabIndex = 4;
@@ -85,23 +87,34 @@ namespace Optikci_Otomasyonu
             this.btnGirisYap.UseVisualStyleBackColor = true;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtKullaniciAdi);
+            this.panel1.Controls.Add(this.btnGirisYap);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtSifre);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 308);
+            this.panel1.TabIndex = 5;
+            // 
             // GirisYap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 365);
-            this.Controls.Add(this.btnGirisYap);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtKullaniciAdi);
+            this.ClientSize = new System.Drawing.Size(284, 308);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "GirisYap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Yap";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GirisYap_FormClosing);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -112,6 +125,7 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGirisYap;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Optikci_Otomasyonu
 {
-    public static class FormIslemleri
+    public class FormIslemleri
     {
         public static void PersonellerOpen(object s, EventArgs e)
         {
@@ -31,6 +31,11 @@ namespace Optikci_Otomasyonu
         {
             UrunSatis urunSatis = new UrunSatis();
             urunSatis.Show();
+        }
+        public static void UrunSatisGrafikleriOpen(object s, EventArgs e)
+        {
+            UrunSatisGrafikleri urunSatisGrafikleri = new UrunSatisGrafikleri();
+            urunSatisGrafikleri.Show();
         }
     }
 }

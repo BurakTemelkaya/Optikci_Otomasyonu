@@ -20,15 +20,17 @@ namespace Optikci_Otomasyonu
         private void Personeller_Load(object sender, EventArgs e)
         {
             PersonelleriListele();
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
 
+            personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
-            personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
         }
         private void FormuKapat(object s, EventArgs e)
         {
@@ -39,15 +41,7 @@ namespace Optikci_Otomasyonu
             string sorgu = "select ID,Personel_Kullanici_Adi as 'Kullanıcı Adı',Personel_Sifre as 'Şifre'," +
             "Personel_Adi as 'Ad',Personel_Soyad as 'Soyad',Personel_Meslek as 'Meslek'," +
             "Personel_Maas as 'Maaş',Personel_Giris_Tarihi as 'Personel Giriş Tarihi' from Personeller";
-            SqlDataAdapter adp = new SqlDataAdapter(sorgu, baglan.baglanti());
-            DataSet ds = new DataSet();
-            baglan.Open();
-            adp.Fill(ds);
-            if (ds.Tables[0].Rows.Count > 0)//veri varsa//dt.Rows.Count
-            {
-                dgvDegerler.DataSource = ds.Tables[0];
-            }
-            baglan.Close();
+            Listele(sorgu);
         }
         int ID;
         private void dgvDegerler_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -102,6 +96,46 @@ namespace Optikci_Otomasyonu
         private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void Listele(string sorgu)
+        {
+            SqlDataAdapter adp = new SqlDataAdapter(sorgu, baglan.baglanti());
+            DataSet ds = new DataSet();
+            baglan.Open();
+            adp.Fill(ds);
+            if (ds.Tables[0].Rows.Count > 0)//veri varsa//dt.Rows.Count
+            {
+                dgvDegerler.DataSource = ds.Tables[0];
+            }
+            baglan.Close();
+        }
+
+        private void toolStripTxtPersonelAra_TextChanged(object sender, EventArgs e)
+        {
+
+            string sorgu = "select ID,Personel_Kullanici_Adi as 'Kullanıcı Adı',Personel_Sifre as 'Şifre'," +
+             "Personel_Adi as 'Ad',Personel_Soyad as 'Soyad',Personel_Meslek as 'Meslek'," +
+             "Personel_Maas as 'Maaş',Personel_Giris_Tarihi as 'Personel Giriş Tarihi' from Personeller " +
+             "where Personel_Kullanici_Adi like '%" + toolStripTxtPersonelAra.Text + "%' " +
+             "or Personel_Adi + ' ' + Personel_Soyad like '%" + toolStripTxtPersonelAra.Text + "%'";
+            //Personeli kullanıcı adına veya adı ve soyadına göre arama
+            Listele(sorgu);
+
+        }
+
+        private void toolStripTxtPersonelAra_Click(object sender, EventArgs e)
+        {
+            toolStripTxtPersonelAra.Text = "";
+        }
+
+        private void toolStripTxtPersonelAra_Leave(object sender, EventArgs e)
+        {
+            toolStripTxtPersonelAra.Text = "Personel Ara";
+        }
+
+        private void sifirlaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelleriListele();
         }
     }
 }

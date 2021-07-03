@@ -21,11 +21,13 @@ namespace Optikci_Otomasyonu
         {
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEKleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
 
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
             personelEKleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
             UrunleriListele();

@@ -14,7 +14,7 @@ namespace Optikci_Otomasyonu
     public partial class Urunler : Form
     {
         SqlBaglantisi baglan = new SqlBaglantisi();
-        string EskiResimYolu,YeniResimYolu;
+        string EskiResimYolu, YeniResimYolu;
         public Urunler()
         {
             InitializeComponent();
@@ -29,11 +29,13 @@ namespace Optikci_Otomasyonu
             UrunleriListele();
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
 
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
         }
@@ -47,6 +49,10 @@ namespace Optikci_Otomasyonu
                 "Urun_Stok_Sayisi as 'Ürünün Stok Sayısı',Urun_Detay as 'Ürün Detay'," +
                 "Urun_Fotograf as 'Ürünün Fotoğrafı',Urun_Eklenme_Tarihi as 'Ürünün Eklenme Tarihi'," +
                 "Urun_Guncellenme_Tarihi as 'Ürünün Güncellenme Tarihi' from Urunler";
+            Listele(sorgu);
+        }
+        private void Listele(string sorgu)
+        {
             SqlDataAdapter adp = new SqlDataAdapter(sorgu, baglan.baglanti());
             DataSet ds = new DataSet();
             baglan.Open();
@@ -56,12 +62,12 @@ namespace Optikci_Otomasyonu
                 dgvDegerler.DataSource = ds.Tables[0];
             }
             baglan.Close();
-        }       
+        }
         int ID;
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (ID!=0)
+            if (ID != 0)
             {
                 string s = "update Urunler set Urun_Adi=@Urun_Adi,Urun_Fiyati=@Urun_Fiyati," +
                 "Urun_Stok_Sayisi=@Urun_Stok_Sayisi,Urun_Detay=@Urun_Detay,Urun_Fotograf=@Urun_Fotograf," +
@@ -85,7 +91,7 @@ namespace Optikci_Otomasyonu
             else
             {
                 MessageBox.Show("Lütfen Kayıt Seçiniz");
-            }            
+            }
         }
 
         private void btnResimDegistir_Click(object sender, EventArgs e)
@@ -148,6 +154,31 @@ namespace Optikci_Otomasyonu
         private void ResmiSil(string eskiResim)
         {
             File.Delete(eskiResim);//resmi sildirme
+        }
+
+        private void toolStriptxtUrunAra_TextChanged(object sender, EventArgs e)
+        {
+            string sorgu = "select ID, Urun_Adi as 'Ürun Adı',Urun_Fiyati as 'Ürün Fiyatı'," +
+                "Urun_Stok_Sayisi as 'Ürünün Stok Sayısı',Urun_Detay as 'Ürün Detay'," +
+                "Urun_Fotograf as 'Ürünün Fotoğrafı',Urun_Eklenme_Tarihi as 'Ürünün Eklenme Tarihi'," +
+                "Urun_Guncellenme_Tarihi as 'Ürünün Güncellenme Tarihi' from Urunler " +
+                "where Urun_Adi like '%" + toolStriptxtUrunAra.Text + "%'";
+            Listele(sorgu);
+        }
+
+        private void toolStriptxtUrunAra_Leave(object sender, EventArgs e)
+        {
+            toolStriptxtUrunAra.Text = "Ürün Ara";
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UrunleriListele();
+        }
+
+        private void toolStriptxtUrunAra_Click(object sender, EventArgs e)
+        {
+            toolStriptxtUrunAra.Clear();
         }
 
         private void cikisYapToolStripMenuItem_Click_1(object sender, EventArgs e)
