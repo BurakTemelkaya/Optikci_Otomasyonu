@@ -101,7 +101,6 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
             // 
             // chart1
             // 
@@ -187,7 +186,6 @@ namespace Optikci_Otomasyonu
             this.Name = "UrunSatisGrafikleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün Satış Grafikleri";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UrunSatisGrafikleri_FormClosing);
             this.Load += new System.EventHandler(this.UrunSatisGrafikleri_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

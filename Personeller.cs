@@ -25,6 +25,8 @@ namespace Optikci_Otomasyonu
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
+            this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
 
             personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);

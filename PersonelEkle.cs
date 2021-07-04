@@ -25,6 +25,8 @@ namespace Optikci_Otomasyonu
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
+            this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
 
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
@@ -79,15 +81,6 @@ namespace Optikci_Otomasyonu
             txtSoyad.Clear();
             cbbMeslegi.SelectedIndex = 0;
             nudMaas.Value = 0;
-        }
-        private void PersonelEkle_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void cikisYapToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

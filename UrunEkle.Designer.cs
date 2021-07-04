@@ -257,7 +257,6 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
             // 
             // UrunEkle
             // 
@@ -271,7 +270,6 @@ namespace Optikci_Otomasyonu
             this.Name = "UrunEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürun Ekle";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UrunEkle_FormClosing);
             this.Load += new System.EventHandler(this.UrunEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

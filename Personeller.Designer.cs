@@ -267,7 +267,6 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
-            this.cikisYapToolStripMenuItem.Click += new System.EventHandler(this.cikisYapToolStripMenuItem_Click);
             // 
             // toolStripTxtPersonelAra
             // 
@@ -312,7 +311,6 @@ namespace Optikci_Otomasyonu
             this.Name = "Personeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personeller";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Personeller_FormClosing);
             this.Load += new System.EventHandler(this.Personeller_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).EndInit();

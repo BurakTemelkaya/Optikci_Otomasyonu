@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Optikci_Otomasyonu
 {
@@ -36,6 +37,14 @@ namespace Optikci_Otomasyonu
         {
             UrunSatisGrafikleri urunSatisGrafikleri = new UrunSatisGrafikleri();
             urunSatisGrafikleri.Show();
+        }
+        public static void Close(object s,EventArgs e)
+        {
+            Application.Exit();
+        }
+        public static void FormClosing(object s, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

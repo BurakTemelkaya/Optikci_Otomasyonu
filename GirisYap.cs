@@ -21,37 +21,52 @@ namespace Optikci_Otomasyonu
         SqlBaglantisi baglan = new SqlBaglantisi();
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            string sorgu = "select ID,Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='"+txtKullaniciAdi.Text+"' and Personel_Sifre='"+txtSifre.Text+"'";
-            SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
-            baglan.Open();
-            SqlDataReader oku = cmd.ExecuteReader();
-            if (oku.Read())
+            if (txtKullaniciAdi.Text!="" && txtSifre.Text!="")
             {
-                Personel_ID = Convert.ToInt32(oku[0]);
-                Urunler urunler = new Urunler();                
-                urunler.Show();
-                this.Hide();
-            }
-            else
-            {
-                if (hak<10)
+                string sorgu = "select ID,Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='" + txtKullaniciAdi.Text + "'";
+                SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
+                baglan.Open();
+                SqlDataReader oku = cmd.ExecuteReader();
+                if (oku.Read())
                 {
-                    MessageBox.Show("Kullanıcı adı veya şifre hatalı. Lütfen Tekrar Deneyiniz");
-                    hak++;
+                    if (txtSifre.Text == oku[2].ToString())
+                    {
+                        Personel_ID = Convert.ToInt32(oku[0]);
+                        Urunler urunler = new Urunler();
+                        urunler.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Şifreniz Hatalı Lütfen Tekrar Deneyin");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Giriş Hakkınız Bitti. Program Kapatılıyor.");
-                    Application.Exit();
-                }               
+                    MessageBox.Show("Kullanıcı adınız hatalı. Lütfen Tekrar Deneyiniz");
+                    hak++;
+                }
+                if (hak > 9)
+                {
+                    MessageBox.Show("Giriş Yapma Hakkınız Bitti Program Kapatılıyor...");
+                }
+                oku.Close();
+                baglan.Close();
             }
-            oku.Close();
-            baglan.Close();
+            else if (txtKullaniciAdi.Text=="")
+            {
+                MessageBox.Show("Lütfen Kullanıcı Adını Boş Bırakmayın.");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Şifreyi Boş Bırakmayın");
+            }
+            
         }
 
-        private void GirisYap_FormClosing(object sender, FormClosingEventArgs e)
+        private void GirisYap_Load(object sender, EventArgs e)
         {
-            Application.Exit();//tamamen çıkmak için kullanılan kod
+            this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
         }
     }
 }

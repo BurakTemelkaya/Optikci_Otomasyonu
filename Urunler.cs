@@ -19,10 +19,6 @@ namespace Optikci_Otomasyonu
         {
             InitializeComponent();
         }
-        private void Urunler_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void Urunler_Load(object sender, EventArgs e)
         {
@@ -32,6 +28,8 @@ namespace Optikci_Otomasyonu
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
+            this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
 
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
@@ -179,11 +177,6 @@ namespace Optikci_Otomasyonu
         private void toolStriptxtUrunAra_Click(object sender, EventArgs e)
         {
             toolStriptxtUrunAra.Clear();
-        }
-
-        private void cikisYapToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

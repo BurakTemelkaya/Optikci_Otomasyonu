@@ -97,21 +97,21 @@ namespace Optikci_Otomasyonu
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 308);
+            this.panel1.Size = new System.Drawing.Size(317, 341);
             this.panel1.TabIndex = 5;
             // 
             // GirisYap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 308);
+            this.ClientSize = new System.Drawing.Size(317, 341);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "GirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Yap";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GirisYap_FormClosing);
+            this.Load += new System.EventHandler(this.GirisYap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
