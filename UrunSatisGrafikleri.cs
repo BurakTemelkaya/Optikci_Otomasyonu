@@ -24,14 +24,18 @@ namespace Optikci_Otomasyonu
             personelEKleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormuKapat);
             cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
             this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
 
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatislariOpen);
             personelEKleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
+            dtpBaslangic.Value = DateTime.Now;
+            dtpBitis.Value = DateTime.Now.AddMonths(1);
             GrafikGetir();
         }
         private void FormuKapat(object s, EventArgs e)
@@ -39,39 +43,66 @@ namespace Optikci_Otomasyonu
             this.Hide();
         }
         private void GrafikGetir()
-        {
-            int brut = 0;
-            int kar = 0;
+        {           
+            ChartClear();            
             int toplamBrut = 0;
             int toplamKar = 0;
-            int toplamUrun=0;
+            int toplamUrun = 0;
             int adet = 0;
             int satisFiyat = 0;
             int alisFiyat = 0;
+            int topSatis = 0;
             string UrununAdi = "";
+            DateTime tarih;
+            DateTime baslangic = Convert.ToDateTime(dtpBitis.Value);
+            DateTime bitis = Convert.ToDateTime(dtpBaslangic.Value);
             baglan.Open();
             SqlCommand komut = new SqlCommand("Select ur.Urun_Adi,ur.Urun_Fiyati,sa.Satis_Fiyati," +
             "sa.Satilan_Stok_Adedi,sa.Satan_Kisi_ID,sa.Satilma_Zamani" +
             " from Urunler ur" +
-            " inner join Satilan_Urunler sa on ur.ID = sa.Satilan_Urun_ID ", baglan.baglanti());
+            " inner join Satilan_Urunler sa on ur.ID = sa.Satilan_Urun_ID " +
+            "where sa.Satilma_Zamani between '" + dtpBaslangic.Value.ToString("yyyy-MM-dd") + "' " +
+            " and '" + dtpBitis.Value.ToString("yyyy-MM-dd") + "' order by sa.Satilma_Zamani ASC", baglan.baglanti());
             SqlDataReader oku = komut.ExecuteReader();
             while (oku.Read())
             {
-                alisFiyat= Convert.ToInt32(oku[1]);
+                int brut = 0;
+                int kar = 0;
+                UrununAdi = oku[0].ToString();
+                tarih = Convert.ToDateTime(oku[5]);
+                alisFiyat = Convert.ToInt32(oku[1]);
                 satisFiyat = Convert.ToInt32(oku[2]);
                 adet = Convert.ToInt32(oku[3]);
-                UrununAdi = oku[0].ToString();
+                topSatis += adet;
                 brut = satisFiyat * adet;
                 kar = (satisFiyat - alisFiyat) * adet;
                 toplamBrut += brut;
                 toplamKar += kar;
-                chart1.Series["Kâr"].Points.AddXY(UrununAdi , kar);
-                chart1.Series["Brüt Gelir"].Points.AddXY(UrununAdi + oku[5].ToString(), brut);
+                chart1.Series["Brüt Gelir"].Points.AddXY(tarih.ToString("dd-MM-yyyy HH:mm"), brut);
+                chart1.Series["Kâr"].Points.AddXY(tarih.ToString("dd-MM-yyyy HH:mm"), kar);                
                 toplamUrun++;
             }
             lblBrutGelir.Text = toplamBrut.ToString();
             lblToplamKar.Text = toplamKar.ToString();
+            lblTopSatis.Text = topSatis.ToString();
             baglan.Close();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            GrafikGetir();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            GrafikGetir();
+        }
+        private void ChartClear()
+        {
+            foreach (var series in chart1.Series)
+            {
+                series.Points.Clear();
+            }
         }
     }
 }

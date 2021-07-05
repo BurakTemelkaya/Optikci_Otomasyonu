@@ -53,6 +53,7 @@ namespace Optikci_Otomasyonu
             this.label8 = new System.Windows.Forms.Label();
             this.txtSatilacakMusterininAdi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStokSayisi)).BeginInit();
@@ -67,6 +68,7 @@ namespace Optikci_Otomasyonu
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
+            this.urunSatislariniGosterToolStripMenuItem,
             this.urunSatisGrafikleriToolStripMenuItem,
             this.personelEKleToolStripMenuItem,
             this.personelListeleGuncelleToolStripMenuItem,
@@ -288,6 +290,12 @@ namespace Optikci_Otomasyonu
             this.label9.TabIndex = 48;
             this.label9.Text = "Satılacak Müşterinin Adı";
             // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 19);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            // 
             // UrunSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -356,5 +364,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.TextBox txtSatilacakMusterininAdi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
     }
 }

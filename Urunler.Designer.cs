@@ -45,6 +45,7 @@ namespace Optikci_Otomasyonu
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,11 +79,11 @@ namespace Optikci_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(467, 336);
+            this.label2.Location = new System.Drawing.Point(451, 338);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Fiyatı";
+            this.label2.Text = "Alış Fiyatı";
             // 
             // label3
             // 
@@ -195,6 +196,7 @@ namespace Optikci_Otomasyonu
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunEkleToolStripMenuItem,
             this.urunSatisiToolStripMenuItem,
+            this.urunSatislariniGosterToolStripMenuItem,
             this.urunSatisGrafikleriToolStripMenuItem,
             this.personelEkleToolStripMenuItem,
             this.personelListeleGuncelleToolStripMenuItem,
@@ -218,6 +220,12 @@ namespace Optikci_Otomasyonu
             this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 23);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
+            // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
@@ -246,7 +254,6 @@ namespace Optikci_Otomasyonu
             // toolStriptxtUrunAra
             // 
             this.toolStriptxtUrunAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.toolStriptxtUrunAra.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStriptxtUrunAra.Name = "toolStriptxtUrunAra";
             this.toolStriptxtUrunAra.Size = new System.Drawing.Size(100, 23);
             this.toolStriptxtUrunAra.Text = "Ürün Ara";
@@ -320,5 +327,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStriptxtUrunAra;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
     }
 }

@@ -21,6 +21,7 @@ namespace Optikci_Otomasyonu
         {
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEKleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
@@ -29,6 +30,7 @@ namespace Optikci_Otomasyonu
 
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatislariOpen);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
             personelEKleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
@@ -66,7 +68,7 @@ namespace Optikci_Otomasyonu
                 nudSatilacakStokSayisi.Maximum = Convert.ToDecimal(item.Cells[3].Value);
                 txtDetay.Text = item.Cells[4].Value.ToString();
                 pbResim.ImageLocation = Application.StartupPath + item.Cells[5].Value.ToString();
-            };
+            }
         }
 
         private void btnSatisYap_Click(object sender, EventArgs e)

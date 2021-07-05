@@ -51,6 +51,7 @@ namespace Optikci_Otomasyonu
             this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -219,6 +220,7 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
             this.urunSatisiToolStripMenuItem,
+            this.urunSatislariniGosterToolStripMenuItem,
             this.urunSatisGrafikleriToolStripMenuItem,
             this.personelListeleGuncelleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
@@ -263,6 +265,12 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
+            // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
             // 
             // PersonelEkle
             // 
@@ -311,5 +319,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem personelListeleGuncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem urunSatisiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
     }
 }

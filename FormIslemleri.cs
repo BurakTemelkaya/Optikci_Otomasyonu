@@ -38,6 +38,12 @@ namespace Optikci_Otomasyonu
             UrunSatisGrafikleri urunSatisGrafikleri = new UrunSatisGrafikleri();
             urunSatisGrafikleri.Show();
         }
+
+        public static void UrunSatislariOpen(object s, EventArgs e)
+        {
+            UrunSatislari urunSatislari = new UrunSatislari();
+            urunSatislari.Show();
+        }
         public static void Close(object s,EventArgs e)
         {
             Application.Exit();

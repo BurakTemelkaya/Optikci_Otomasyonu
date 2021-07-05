@@ -52,6 +52,7 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTxtPersonelAra = new System.Windows.Forms.ToolStripTextBox();
             this.sifirlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -222,6 +223,7 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
             this.urunSatisiToolStripMenuItem,
+            this.urunSatislariniGosterToolStripMenuItem,
             this.urunSatisGrafikleriToolStripMenuItem,
             this.cikisYapToolStripMenuItem,
             this.toolStripTxtPersonelAra,
@@ -286,6 +288,12 @@ namespace Optikci_Otomasyonu
             this.sifirlaToolStripMenuItem.Text = "Sıfırla";
             this.sifirlaToolStripMenuItem.Click += new System.EventHandler(this.sifirlaToolStripMenuItem_Click);
             // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -345,5 +353,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTxtPersonelAra;
         private System.Windows.Forms.ToolStripMenuItem sifirlaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
     }
 }

@@ -24,6 +24,7 @@ namespace Optikci_Otomasyonu
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
             this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
@@ -32,6 +33,7 @@ namespace Optikci_Otomasyonu
             urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatislariOpen);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
         }
         private void FormuKapat(object s, EventArgs e)

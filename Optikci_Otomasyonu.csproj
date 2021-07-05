@@ -91,6 +91,12 @@
     <Compile Include="UrunSatisGrafikleri.Designer.cs">
       <DependentUpon>UrunSatisGrafikleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="UrunSatislari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunSatislari.Designer.cs">
+      <DependentUpon>UrunSatislari.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GirisYap.resx">
       <DependentUpon>GirisYap.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UrunSatisGrafikleri.resx">
       <DependentUpon>UrunSatisGrafikleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunSatislari.resx">
+      <DependentUpon>UrunSatislari.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

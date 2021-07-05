@@ -15,16 +15,17 @@ namespace Optikci_Otomasyonu
     {
         SqlBaglantisi baglan = new SqlBaglantisi();
         string EskiResimYolu, YeniResimYolu;
+        bool ResimDegistiMi;
         public Urunler()
         {
             InitializeComponent();
         }
 
         private void Urunler_Load(object sender, EventArgs e)
-        {
-            UrunleriListele();
+        {            
             urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormuKapat);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormuKapat);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
@@ -33,9 +34,11 @@ namespace Optikci_Otomasyonu
 
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
             urunSatisiToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisOpen);
+            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatislariOpen);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
             personelEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
+            UrunleriListele();
         }
         private void FormuKapat(object s, EventArgs e)
         {
@@ -75,10 +78,16 @@ namespace Optikci_Otomasyonu
                 cmd.Parameters.AddWithValue("@Urun_Fiyati", nudFiyati.Value);
                 cmd.Parameters.AddWithValue("@Urun_Stok_Sayisi", nudStokSayisi.Value);
                 cmd.Parameters.AddWithValue("@Urun_Detay", txtDetay.Text);
-                if (YeniResimYolu != "")
+                if (ResimDegistiMi)
                 {
                     ResmiGuncelle(EskiResimYolu);
+                    MessageBox.Show(YeniResimYolu);
                     cmd.Parameters.AddWithValue("@Urun_Fotograf", YeniResimYolu);
+                    ResimDegistiMi = false;
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Urun_Fotograf", EskiResimYolu);
                 }
                 cmd.Parameters.AddWithValue("@Urun_Guncellenme_Tarihi", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
                 baglan.Open();
@@ -98,6 +107,7 @@ namespace Optikci_Otomasyonu
             resim.Filter = "Tüm dosyalar | *.*";
             resim.ShowDialog();
             pbResim.ImageLocation = resim.FileName;
+            ResimDegistiMi = true;
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -141,13 +151,27 @@ namespace Optikci_Otomasyonu
 
         private void ResmiGuncelle(string eskiResim)
         {
-            ResmiSil(eskiResim);//eski resmi sildirme
-            string kaynak = pbResim.ImageLocation;//dosya yolunu alma
-            string dosyaAdi = Path.GetFileName(kaynak); //Dosya adını alma
-            string hedef = Application.StartupPath + @"\Resimler\";
-            string yeniad = Guid.NewGuid() + dosyaAdi; //Benzersiz isim verme
-            File.Copy(kaynak, hedef + yeniad);//resmi kopyalama
-            YeniResimYolu = @"\Resimler\" + yeniad;//veritabanına kaydedilecek resmin ismi
+            try
+            {
+                ResmiSil(eskiResim);//eski resmi sildirme
+            }
+            catch
+            {
+                ;
+            }
+            finally
+            {
+                //eski resim silinsede silinmesede kopyalama işlemi yapılacak.
+                string kaynak = pbResim.ImageLocation;//dosya yolunu alma
+                string dosyaAdi = Path.GetFileName(kaynak); //Dosya adını alma
+                string hedef = Application.StartupPath + @"\Resimler\";
+                string yeniad = Guid.NewGuid() + dosyaAdi; //Benzersiz isim verme
+                File.Copy(kaynak, hedef + yeniad);//resmi kopyalama
+                YeniResimYolu = @"\Resimler\" + yeniad;//veritabanına kaydedilecek resmin konumu
+                //Application.StartupPath kodu projenin bin/debug dosyasının konumudur. Her projede
+                //programın konumu değişiklik göstereceği için çağırırkende kaydederkende
+                //bu kodu başa yazıyoruz.
+            }
         }
         private void ResmiSil(string eskiResim)
         {

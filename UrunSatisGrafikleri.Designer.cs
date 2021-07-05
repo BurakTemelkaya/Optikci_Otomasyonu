@@ -29,15 +29,16 @@ namespace Optikci_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEKleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +47,11 @@ namespace Optikci_Otomasyonu
             this.lblToplamKar = new System.Windows.Forms.Label();
             this.lblBrutGelir = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblTopSatis = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.dtpBitis = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +62,7 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
             this.urunSatisiToolStripMenuItem,
+            this.urunSatislariniGosterToolStripMenuItem,
             this.personelEKleToolStripMenuItem,
             this.personelListeleGuncelleToolStripMenuItem,
             this.cikisYapToolStripMenuItem});
@@ -84,6 +91,12 @@ namespace Optikci_Otomasyonu
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
             // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 19);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            // 
             // personelEKleToolStripMenuItem
             // 
             this.personelEKleToolStripMenuItem.Name = "personelEKleToolStripMenuItem";
@@ -104,27 +117,31 @@ namespace Optikci_Otomasyonu
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 29);
             this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Brüt Gelir";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Kâr";
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series1.Legend = "Legend1";
+            series1.Name = "Kâr";
+            series1.YValuesPerPoint = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series2.Legend = "Legend1";
+            series2.Name = "Brüt Gelir";
+            series2.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1233, 668);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
-            title2.Name = "Satış Zamanı";
-            this.chart1.Titles.Add(title2);
+            title1.Name = "Satış Zamanı";
+            this.chart1.Titles.Add(title1);
             // 
             // label1
             // 
@@ -170,11 +187,69 @@ namespace Optikci_Otomasyonu
             this.label4.Text = "Toplam Brüt Gelir:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblTopSatis
+            // 
+            this.lblTopSatis.AutoSize = true;
+            this.lblTopSatis.Location = new System.Drawing.Point(1103, 359);
+            this.lblTopSatis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTopSatis.Name = "lblTopSatis";
+            this.lblTopSatis.Size = new System.Drawing.Size(101, 20);
+            this.lblTopSatis.TabIndex = 20;
+            this.lblTopSatis.Text = "Toplam Satış";
+            this.lblTopSatis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1103, 325);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 20);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Toplam Satış:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpBaslangic
+            // 
+            this.dtpBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBaslangic.Location = new System.Drawing.Point(1097, 436);
+            this.dtpBaslangic.Name = "dtpBaslangic";
+            this.dtpBaslangic.Size = new System.Drawing.Size(121, 26);
+            this.dtpBaslangic.TabIndex = 21;
+            this.dtpBaslangic.Value = new System.DateTime(2021, 7, 1, 0, 0, 0, 0);
+            this.dtpBaslangic.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dtpBitis
+            // 
+            this.dtpBitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBitis.Location = new System.Drawing.Point(1097, 510);
+            this.dtpBitis.Name = "dtpBitis";
+            this.dtpBitis.Size = new System.Drawing.Size(121, 26);
+            this.dtpBitis.TabIndex = 22;
+            this.dtpBitis.Value = new System.DateTime(2021, 8, 1, 0, 0, 0, 0);
+            this.dtpBitis.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1124, 475);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Arasında";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UrunSatisGrafikleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 697);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtpBitis);
+            this.Controls.Add(this.dtpBaslangic);
+            this.Controls.Add(this.lblTopSatis);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblBrutGelir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblToplamKar);
@@ -209,5 +284,11 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.Label lblToplamKar;
         private System.Windows.Forms.Label lblBrutGelir;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTopSatis;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpBaslangic;
+        private System.Windows.Forms.DateTimePicker dtpBitis;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
     }
 }
