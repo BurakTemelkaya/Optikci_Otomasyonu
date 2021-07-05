@@ -46,11 +46,11 @@ namespace Optikci_Otomasyonu
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
@@ -80,7 +80,7 @@ namespace Optikci_Otomasyonu
             // 
             // btnTemizle
             // 
-            this.btnTemizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnTemizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(108)))), ((int)(((byte)(143)))));
             this.btnTemizle.Location = new System.Drawing.Point(549, 842);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(244, 41);
@@ -100,6 +100,7 @@ namespace Optikci_Otomasyonu
             // 
             // nudFiyati
             // 
+            this.nudFiyati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(172)))), ((int)(((byte)(68)))));
             this.nudFiyati.DecimalPlaces = 2;
             this.nudFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nudFiyati.Location = new System.Drawing.Point(170, 200);
@@ -116,6 +117,7 @@ namespace Optikci_Otomasyonu
             // 
             // nudStokSayisi
             // 
+            this.nudStokSayisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(172)))), ((int)(((byte)(68)))));
             this.nudStokSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nudStokSayisi.Location = new System.Drawing.Point(170, 286);
             this.nudStokSayisi.Name = "nudStokSayisi";
@@ -125,7 +127,7 @@ namespace Optikci_Otomasyonu
             // 
             // btnResimEkle
             // 
-            this.btnResimEkle.BackColor = System.Drawing.Color.Lime;
+            this.btnResimEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(173)))), ((int)(((byte)(52)))));
             this.btnResimEkle.Location = new System.Drawing.Point(241, 775);
             this.btnResimEkle.Name = "btnResimEkle";
             this.btnResimEkle.Size = new System.Drawing.Size(487, 41);
@@ -146,7 +148,7 @@ namespace Optikci_Otomasyonu
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUrunEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.btnUrunEkle.Location = new System.Drawing.Point(170, 842);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(373, 41);
@@ -157,6 +159,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtDetay
             // 
+            this.txtDetay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(172)))), ((int)(((byte)(68)))));
             this.txtDetay.Location = new System.Drawing.Point(170, 375);
             this.txtDetay.Multiline = true;
             this.txtDetay.Name = "txtDetay";
@@ -167,32 +170,33 @@ namespace Optikci_Otomasyonu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(452, 335);
+            this.label4.Location = new System.Drawing.Point(443, 334);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Detay";
+            this.label4.Text = "DETAY";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(432, 251);
+            this.label3.Location = new System.Drawing.Point(422, 249);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Stok Sayısı";
+            this.label3.Text = "STOK SAYISI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(451, 163);
+            this.label2.Location = new System.Drawing.Point(445, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Fiyatı";
+            this.label2.Text = "FİYATI";
             // 
             // txtAdi
             // 
+            this.txtAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(172)))), ((int)(((byte)(68)))));
             this.txtAdi.Location = new System.Drawing.Point(170, 119);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(623, 26);
@@ -204,9 +208,9 @@ namespace Optikci_Otomasyonu
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(457, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.Size = new System.Drawing.Size(37, 20);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Adı";
+            this.label1.Text = "ADI";
             // 
             // menuStrip1
             // 
@@ -236,6 +240,12 @@ namespace Optikci_Otomasyonu
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
             // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
             this.urunSatisGrafikleriToolStripMenuItem.Name = "urunSatisGrafikleriToolStripMenuItem";
@@ -260,16 +270,11 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
             // 
-            // urunSatislariniGosterToolStripMenuItem
-            // 
-            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
-            // 
             // UrunEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(92)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1200, 932);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);

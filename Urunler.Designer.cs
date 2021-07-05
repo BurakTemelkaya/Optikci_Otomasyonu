@@ -183,6 +183,7 @@ namespace Optikci_Otomasyonu
             // 
             this.dgvDegerler.AllowUserToAddRows = false;
             this.dgvDegerler.AllowUserToDeleteRows = false;
+            this.dgvDegerler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(162)))), ((int)(((byte)(83)))));
             this.dgvDegerler.ColumnHeadersHeight = 30;
             this.dgvDegerler.Location = new System.Drawing.Point(38, 27);
             this.dgvDegerler.Name = "dgvDegerler";
@@ -254,6 +255,7 @@ namespace Optikci_Otomasyonu
             // toolStriptxtUrunAra
             // 
             this.toolStriptxtUrunAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.toolStriptxtUrunAra.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStriptxtUrunAra.Name = "toolStriptxtUrunAra";
             this.toolStriptxtUrunAra.Size = new System.Drawing.Size(100, 23);
             this.toolStriptxtUrunAra.Text = "Ürün Ara";
@@ -272,6 +274,7 @@ namespace Optikci_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.ClientSize = new System.Drawing.Size(966, 911);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvDegerler);

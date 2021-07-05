@@ -40,6 +40,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(55, 73);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(6);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
@@ -69,6 +70,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtSifre
             // 
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.txtSifre.Location = new System.Drawing.Point(55, 179);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(6);
             this.txtSifre.Name = "txtSifre";
@@ -79,16 +81,18 @@ namespace Optikci_Otomasyonu
             // 
             // btnGirisYap
             // 
+            this.btnGirisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGirisYap.Location = new System.Drawing.Point(55, 238);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(196, 41);
             this.btnGirisYap.TabIndex = 4;
             this.btnGirisYap.Text = "Giriş Yap";
-            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
             this.panel1.Controls.Add(this.txtKullaniciAdi);
             this.panel1.Controls.Add(this.btnGirisYap);
             this.panel1.Controls.Add(this.label1);

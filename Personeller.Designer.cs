@@ -48,11 +48,11 @@ namespace Optikci_Otomasyonu
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunSatisGrafikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTxtPersonelAra = new System.Windows.Forms.ToolStripTextBox();
             this.sifirlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.urunSatislariniGosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -61,7 +61,7 @@ namespace Optikci_Otomasyonu
             // btnPersonelGuncelle
             // 
             this.btnPersonelGuncelle.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPersonelGuncelle.Location = new System.Drawing.Point(384, 643);
+            this.btnPersonelGuncelle.Location = new System.Drawing.Point(380, 642);
             this.btnPersonelGuncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPersonelGuncelle.Name = "btnPersonelGuncelle";
             this.btnPersonelGuncelle.Size = new System.Drawing.Size(244, 60);
@@ -72,6 +72,7 @@ namespace Optikci_Otomasyonu
             // 
             // nudMaas
             // 
+            this.nudMaas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(139)))), ((int)(((byte)(129)))));
             this.nudMaas.DecimalPlaces = 2;
             this.nudMaas.Location = new System.Drawing.Point(662, 593);
             this.nudMaas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -89,7 +90,7 @@ namespace Optikci_Otomasyonu
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(774, 542);
+            this.label7.Location = new System.Drawing.Point(774, 543);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 20);
@@ -99,7 +100,7 @@ namespace Optikci_Otomasyonu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(465, 543);
+            this.label6.Location = new System.Drawing.Point(478, 543);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
@@ -129,6 +130,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtSoyad
             // 
+            this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(139)))), ((int)(((byte)(129)))));
             this.txtSoyad.Location = new System.Drawing.Point(664, 494);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSoyad.Name = "txtSoyad";
@@ -139,7 +141,7 @@ namespace Optikci_Otomasyonu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(774, 438);
+            this.label4.Location = new System.Drawing.Point(768, 439);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
@@ -148,6 +150,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtAdi
             // 
+            this.txtAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(139)))), ((int)(((byte)(129)))));
             this.txtAdi.Location = new System.Drawing.Point(360, 494);
             this.txtAdi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAdi.Name = "txtAdi";
@@ -158,7 +161,7 @@ namespace Optikci_Otomasyonu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(482, 439);
+            this.label5.Location = new System.Drawing.Point(490, 439);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 20);
@@ -167,6 +170,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtSifre
             // 
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(139)))), ((int)(((byte)(129)))));
             this.txtSifre.Location = new System.Drawing.Point(32, 595);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSifre.Name = "txtSifre";
@@ -178,7 +182,7 @@ namespace Optikci_Otomasyonu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 543);
+            this.label3.Location = new System.Drawing.Point(145, 543);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
@@ -187,6 +191,7 @@ namespace Optikci_Otomasyonu
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(139)))), ((int)(((byte)(129)))));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(32, 494);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
@@ -197,7 +202,7 @@ namespace Optikci_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 439);
+            this.label1.Location = new System.Drawing.Point(122, 439);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
@@ -208,11 +213,12 @@ namespace Optikci_Otomasyonu
             // 
             this.dgvDegerler.AllowUserToAddRows = false;
             this.dgvDegerler.AllowUserToDeleteRows = false;
+            this.dgvDegerler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(173)))), ((int)(((byte)(47)))));
             this.dgvDegerler.ColumnHeadersHeight = 30;
-            this.dgvDegerler.Location = new System.Drawing.Point(27, 27);
+            this.dgvDegerler.Location = new System.Drawing.Point(27, 45);
             this.dgvDegerler.Name = "dgvDegerler";
             this.dgvDegerler.ReadOnly = true;
-            this.dgvDegerler.Size = new System.Drawing.Size(945, 397);
+            this.dgvDegerler.Size = new System.Drawing.Size(945, 379);
             this.dgvDegerler.TabIndex = 36;
             this.dgvDegerler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDegerler_CellClick);
             // 
@@ -258,6 +264,12 @@ namespace Optikci_Otomasyonu
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 23);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
             // 
+            // urunSatislariniGosterToolStripMenuItem
+            // 
+            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
             this.urunSatisGrafikleriToolStripMenuItem.Name = "urunSatisGrafikleriToolStripMenuItem";
@@ -273,7 +285,6 @@ namespace Optikci_Otomasyonu
             // toolStripTxtPersonelAra
             // 
             this.toolStripTxtPersonelAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.toolStripTxtPersonelAra.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTxtPersonelAra.Name = "toolStripTxtPersonelAra";
             this.toolStripTxtPersonelAra.Size = new System.Drawing.Size(100, 23);
             this.toolStripTxtPersonelAra.Text = "Personel Ara";
@@ -288,16 +299,11 @@ namespace Optikci_Otomasyonu
             this.sifirlaToolStripMenuItem.Text = "Sıfırla";
             this.sifirlaToolStripMenuItem.Click += new System.EventHandler(this.sifirlaToolStripMenuItem_Click);
             // 
-            // urunSatislariniGosterToolStripMenuItem
-            // 
-            this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
-            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(95)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(984, 716);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvDegerler);

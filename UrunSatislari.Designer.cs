@@ -29,7 +29,7 @@ namespace Optikci_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,6 +124,7 @@ namespace Optikci_Otomasyonu
             // 
             this.dgvDegerler.AllowUserToAddRows = false;
             this.dgvDegerler.AllowUserToDeleteRows = false;
+            this.dgvDegerler.BackgroundColor = System.Drawing.Color.Gray;
             this.dgvDegerler.ColumnHeadersHeight = 30;
             this.dgvDegerler.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvDegerler.Location = new System.Drawing.Point(0, 35);
@@ -131,9 +132,10 @@ namespace Optikci_Otomasyonu
             this.dgvDegerler.Name = "dgvDegerler";
             this.dgvDegerler.ReadOnly = true;
             this.dgvDegerler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dgvDegerler.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvDegerler.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDegerler.Size = new System.Drawing.Size(1186, 365);
             this.dgvDegerler.TabIndex = 43;
             this.dgvDegerler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDegerler_CellClick);
@@ -294,6 +296,7 @@ namespace Optikci_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1186, 740);
             this.Controls.Add(this.lblSatanKisi);
             this.Controls.Add(this.label8);
@@ -315,8 +318,10 @@ namespace Optikci_Otomasyonu
             this.Controls.Add(this.dgvDegerler);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UrunSatislari";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrunSatislari";
             this.Load += new System.EventHandler(this.UrunSatislari_Load);
             this.menuStrip1.ResumeLayout(false);
