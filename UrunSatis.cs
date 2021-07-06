@@ -19,26 +19,15 @@ namespace Optikci_Otomasyonu
         SqlBaglantisi baglan = new SqlBaglantisi();
         private void UrunSatis_Load(object sender, EventArgs e)
         {
-            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            urunEkleToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            personelEKleToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormuKapat);
-            cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
-            this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
-
-            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunEkleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunEkleOpen);
+            urunleriListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunlerOpen);
             urunSatislariniGosterToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatislariOpen);
             urunSatisGrafikleriToolStripMenuItem.Click += new EventHandler(FormIslemleri.UrunSatisGrafikleriOpen);
             personelEKleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonelEkleOpen);
             personelListeleGuncelleToolStripMenuItem.Click += new EventHandler(FormIslemleri.PersonellerOpen);
+            cikisYapToolStripMenuItem.Click += new EventHandler(FormIslemleri.Close);
+            this.FormClosing += new FormClosingEventHandler(FormIslemleri.FormClosing);
             UrunleriListele();
-        }
-        private void FormuKapat(object s, EventArgs e)
-        {
-            this.Hide();
         }
         private void UrunleriListele()
         {

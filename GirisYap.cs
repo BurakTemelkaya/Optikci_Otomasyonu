@@ -18,12 +18,13 @@ namespace Optikci_Otomasyonu
         }
         int hak;
         public static int Personel_ID;
+        public static string Personel_Meslek;
         SqlBaglantisi baglan = new SqlBaglantisi();
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
             if (txtKullaniciAdi.Text!="" && txtSifre.Text!="")
             {
-                string sorgu = "select ID,Personel_Kullanici_Adi,Personel_Sifre from Personeller where Personel_Kullanici_Adi='" + txtKullaniciAdi.Text + "'";
+                string sorgu = "select ID,Personel_Kullanici_Adi,Personel_Sifre,Personel_Meslek from Personeller where Personel_Kullanici_Adi='" + txtKullaniciAdi.Text + "'";
                 SqlCommand cmd = new SqlCommand(sorgu, baglan.baglanti());
                 baglan.Open();
                 SqlDataReader oku = cmd.ExecuteReader();
@@ -32,7 +33,9 @@ namespace Optikci_Otomasyonu
                     if (txtSifre.Text == oku[2].ToString())
                     {
                         Personel_ID = Convert.ToInt32(oku[0]);
+                        Personel_Meslek = oku[3].ToString();                       
                         Urunler urunler = new Urunler();
+                        FormIslemleri.ClosingForm = urunler;
                         urunler.Show();
                         this.Hide();
                     }
@@ -60,8 +63,7 @@ namespace Optikci_Otomasyonu
             else
             {
                 MessageBox.Show("Lütfen Şifreyi Boş Bırakmayın");
-            }
-            
+            }            
         }
 
         private void GirisYap_Load(object sender, EventArgs e)
