@@ -62,7 +62,7 @@ namespace Optikci_Otomasyonu
             cmd.Parameters.AddWithValue("@Urun_Stok_Sayisi", nudStokSayisi.Value);
             cmd.Parameters.AddWithValue("@Urun_Detay", txtDetay.Text);
             cmd.Parameters.AddWithValue("@Urun_Fotograf", resimYolu);
-            cmd.Parameters.AddWithValue("@Urun_Eklenme_Tarihi", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+            cmd.Parameters.AddWithValue("@Urun_Eklenme_Tarihi", DateTime.Now);
             baglan.Open();
             cmd.ExecuteNonQuery();
             baglan.Close();

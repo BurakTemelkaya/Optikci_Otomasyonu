@@ -19,10 +19,10 @@ namespace Optikci_Otomasyonu
         //İnsan Kaynakları Müdürü
         //İnsan Kaynakları Uzmanı
         public static Form ClosingForm;//kapatılacak form
-        private static string Meslek = GirisYap.Personel_Meslek;
+        public static string Meslek;
         public static void PersonellerOpen(object s, EventArgs e)
         {
-            if (Meslek== "Müdür" || Meslek == "Müdür Yardımcısı" || Meslek == "Satış Müdürü" || Meslek == "Satış Müdür Yardımcısı" || Meslek== "İnsan Kaynakları Müdürü" || Meslek == "İnsan Kaynakları Uzmanı")
+            if (Meslek == "Müdür" || Meslek == "Müdür Yardımcısı" || Meslek == "Satış Müdürü" || Meslek == "Satış Müdür Yardımcısı" || Meslek == "İnsan Kaynakları Müdürü" || Meslek == "İnsan Kaynakları Uzmanı")
             {
                 FormHide();
                 Personeller personeller = new Personeller();
@@ -32,10 +32,10 @@ namespace Optikci_Otomasyonu
             else
             {
                 MessageBox.Show("Bu Formu Görüntüleme Yetkiniz Bulunmamaktadır.");
-            }           
+            }
         }
         public static void PersonelEkleOpen(object s, EventArgs e)
-        {           
+        {
             if (Meslek == "Müdür" || Meslek == "Müdür Yardımcısı" || Meslek == "Satış Müdürü" || Meslek == "Satış Müdür Yardımcısı" || Meslek == "İnsan Kaynakları Müdürü" || Meslek == "İnsan Kaynakları Uzmanı")
             {
                 FormHide();

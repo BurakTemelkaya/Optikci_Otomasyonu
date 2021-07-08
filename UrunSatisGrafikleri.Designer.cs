@@ -52,8 +52,12 @@ namespace Optikci_Otomasyonu
             this.dtpBaslangic = new System.Windows.Forms.DateTimePicker();
             this.dtpBitis = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblOrtalamaKar = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -120,7 +124,6 @@ namespace Optikci_Otomasyonu
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(184)))), ((int)(((byte)(219)))));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 29);
@@ -147,29 +150,29 @@ namespace Optikci_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1107, 245);
+            this.label1.Location = new System.Drawing.Point(38, 101);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Toplam Kar:";
+            this.label1.Text = "Toplam Kâr:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblToplamKar
             // 
             this.lblToplamKar.AutoSize = true;
-            this.lblToplamKar.Location = new System.Drawing.Point(1107, 279);
+            this.lblToplamKar.Location = new System.Drawing.Point(38, 135);
             this.lblToplamKar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblToplamKar.Name = "lblToplamKar";
             this.lblToplamKar.Size = new System.Drawing.Size(89, 20);
             this.lblToplamKar.TabIndex = 16;
-            this.lblToplamKar.Text = "Toplam Kar";
+            this.lblToplamKar.Text = "Toplam Kâr";
             this.lblToplamKar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBrutGelir
             // 
             this.lblBrutGelir.AutoSize = true;
-            this.lblBrutGelir.Location = new System.Drawing.Point(1107, 198);
+            this.lblBrutGelir.Location = new System.Drawing.Point(38, 54);
             this.lblBrutGelir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBrutGelir.Name = "lblBrutGelir";
             this.lblBrutGelir.Size = new System.Drawing.Size(76, 20);
@@ -180,7 +183,7 @@ namespace Optikci_Otomasyonu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1082, 164);
+            this.label4.Location = new System.Drawing.Point(13, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 20);
@@ -191,7 +194,7 @@ namespace Optikci_Otomasyonu
             // lblTopSatis
             // 
             this.lblTopSatis.AutoSize = true;
-            this.lblTopSatis.Location = new System.Drawing.Point(1103, 359);
+            this.lblTopSatis.Location = new System.Drawing.Point(34, 215);
             this.lblTopSatis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTopSatis.Name = "lblTopSatis";
             this.lblTopSatis.Size = new System.Drawing.Size(101, 20);
@@ -202,7 +205,7 @@ namespace Optikci_Otomasyonu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1103, 325);
+            this.label3.Location = new System.Drawing.Point(34, 181);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
@@ -213,7 +216,7 @@ namespace Optikci_Otomasyonu
             // dtpBaslangic
             // 
             this.dtpBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBaslangic.Location = new System.Drawing.Point(1097, 436);
+            this.dtpBaslangic.Location = new System.Drawing.Point(28, 344);
             this.dtpBaslangic.Name = "dtpBaslangic";
             this.dtpBaslangic.Size = new System.Drawing.Size(121, 26);
             this.dtpBaslangic.TabIndex = 21;
@@ -223,7 +226,7 @@ namespace Optikci_Otomasyonu
             // dtpBitis
             // 
             this.dtpBitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBitis.Location = new System.Drawing.Point(1097, 510);
+            this.dtpBitis.Location = new System.Drawing.Point(28, 418);
             this.dtpBitis.Name = "dtpBitis";
             this.dtpBitis.Size = new System.Drawing.Size(121, 26);
             this.dtpBitis.TabIndex = 22;
@@ -233,7 +236,7 @@ namespace Optikci_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1124, 475);
+            this.label2.Location = new System.Drawing.Point(55, 383);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 20);
@@ -241,20 +244,53 @@ namespace Optikci_Otomasyonu
             this.label2.Text = "Arasında";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblOrtalamaKar
+            // 
+            this.lblOrtalamaKar.AutoSize = true;
+            this.lblOrtalamaKar.Location = new System.Drawing.Point(34, 292);
+            this.lblOrtalamaKar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOrtalamaKar.Name = "lblOrtalamaKar";
+            this.lblOrtalamaKar.Size = new System.Drawing.Size(102, 20);
+            this.lblOrtalamaKar.TabIndex = 25;
+            this.lblOrtalamaKar.Text = "Ortalama Kâr";
+            this.lblOrtalamaKar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(34, 258);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 20);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Ortalama Kâr:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(180)))), ((int)(((byte)(170)))));
+            this.panel1.Controls.Add(this.lblOrtalamaKar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblToplamKar);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.dtpBitis);
+            this.panel1.Controls.Add(this.lblBrutGelir);
+            this.panel1.Controls.Add(this.dtpBaslangic);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblTopSatis);
+            this.panel1.Location = new System.Drawing.Point(1064, 161);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(164, 470);
+            this.panel1.TabIndex = 26;
+            // 
             // UrunSatisGrafikleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 697);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtpBitis);
-            this.Controls.Add(this.dtpBaslangic);
-            this.Controls.Add(this.lblTopSatis);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblBrutGelir);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblToplamKar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -266,6 +302,8 @@ namespace Optikci_Otomasyonu
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +329,8 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.DateTimePicker dtpBitis;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
+        private System.Windows.Forms.Label lblOrtalamaKar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
     }
 }

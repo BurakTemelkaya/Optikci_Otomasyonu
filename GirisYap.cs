@@ -18,7 +18,6 @@ namespace Optikci_Otomasyonu
         }
         int hak;
         public static int Personel_ID;
-        public static string Personel_Meslek;
         SqlBaglantisi baglan = new SqlBaglantisi();
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,7 @@ namespace Optikci_Otomasyonu
                     if (txtSifre.Text == oku[2].ToString())
                     {
                         Personel_ID = Convert.ToInt32(oku[0]);
-                        Personel_Meslek = oku[3].ToString();                       
+                        FormIslemleri.Meslek = oku[3].ToString();
                         Urunler urunler = new Urunler();
                         FormIslemleri.ClosingForm = urunler;
                         urunler.Show();

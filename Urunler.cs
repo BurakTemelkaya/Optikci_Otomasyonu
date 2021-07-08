@@ -57,7 +57,7 @@ namespace Optikci_Otomasyonu
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (ID != 0)
+            if (ID != 0 && txtAdi.Text!="" && txtDetay.Text!="")
             {
                 string s = "update Urunler set Urun_Adi=@Urun_Adi,Urun_Fiyati=@Urun_Fiyati," +
                 "Urun_Stok_Sayisi=@Urun_Stok_Sayisi,Urun_Detay=@Urun_Detay,Urun_Fotograf=@Urun_Fotograf," +
@@ -70,7 +70,6 @@ namespace Optikci_Otomasyonu
                 if (ResimDegistiMi)
                 {
                     ResmiGuncelle(EskiResimYolu);
-                    MessageBox.Show(YeniResimYolu);
                     cmd.Parameters.AddWithValue("@Urun_Fotograf", YeniResimYolu);
                     ResimDegistiMi = false;
                 }
@@ -83,6 +82,7 @@ namespace Optikci_Otomasyonu
                 cmd.ExecuteNonQuery();
                 baglan.Close();
                 MessageBox.Show("Güncelleme İşlemi Başarılı");
+                UrunleriListele();
             }
             else
             {
@@ -94,9 +94,11 @@ namespace Optikci_Otomasyonu
         {
             OpenFileDialog resim = new OpenFileDialog();
             resim.Filter = "Tüm dosyalar | *.*";
-            resim.ShowDialog();
-            pbResim.ImageLocation = resim.FileName;
-            ResimDegistiMi = true;
+            if (resim.ShowDialog() == DialogResult.OK)//dosya seçildi mi ?
+            {
+                pbResim.ImageLocation = resim.FileName;
+                ResimDegistiMi = true;
+            }            
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -134,7 +136,7 @@ namespace Optikci_Otomasyonu
                 nudStokSayisi.Value = Convert.ToDecimal(item.Cells[3].Value);
                 txtDetay.Text = item.Cells[4].Value.ToString();
                 pbResim.ImageLocation = Application.StartupPath + item.Cells[5].Value.ToString();
-                EskiResimYolu = Application.StartupPath + item.Cells[5].Value.ToString();
+                EskiResimYolu = item.Cells[5].Value.ToString();
             }
         }
 
@@ -157,8 +159,9 @@ namespace Optikci_Otomasyonu
                 string yeniad = Guid.NewGuid() + dosyaAdi; //Benzersiz isim verme
                 File.Copy(kaynak, hedef + yeniad);//resmi kopyalama
                 YeniResimYolu = @"\Resimler\" + yeniad;//veritabanına kaydedilecek resmin konumu
-                //Application.StartupPath kodu projenin bin/debug dosyasının konumudur. Her projede
-                //programın konumu değişiklik göstereceği için çağırırkende kaydederkende
+                /////////////
+                //Application.StartupPath kodu projenin bin\debug dosyasının konumudur. Her projede
+                //programın konumu değişiklik göstereceği için resmi veya dosyayı çağırırken
                 //bu kodu başa yazıyoruz.
             }
         }

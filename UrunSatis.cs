@@ -86,7 +86,7 @@ namespace Optikci_Otomasyonu
             cmd.Parameters.AddWithValue("@Satilan_Stok_Adedi", nudSatilacakStokSayisi.Value);
             cmd.Parameters.AddWithValue("@Satan_Kisi_ID", GirisYap.Personel_ID);
             cmd.Parameters.AddWithValue("@Satilan_Kisi", txtSatilacakMusterininAdi.Text);
-            cmd.Parameters.AddWithValue("@Satilma_Zamani", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+            cmd.Parameters.AddWithValue("@Satilma_Zamani", DateTime.Now);
             baglan.Open();
             cmd.ExecuteNonQuery();
             baglan.Close();

@@ -35,8 +35,8 @@ namespace Optikci_Otomasyonu
             if (txtKullaniciAdi.Text != "" && nudMaas.Value != 0 && txtAdi.Text != "" && txtSoyad.Text != "" && txtSifre.Text!="")
             {
                 string sorgu = "insert into Personeller(Personel_Kullanici_Adi,Personel_Sifre," +
-                    "Personel_Adi,Personel_Soyad,Personel_Meslek,Personel_Maas,Personel_Giris_Tarihi)" +
-                    " values (@Personel_Kullanici_Adi,@Personel_Sifre,@Personel_Adi,@Personel_Soyad," +
+                    "Personel_Adi,Personel_Soyad,Personel_Meslek,Personel_Maas,Personel_Giris_Tarihi) " +
+                    "values (@Personel_Kullanici_Adi,@Personel_Sifre,@Personel_Adi,@Personel_Soyad," +
                     "@Personel_Meslek,@Personel_Maas,@Personel_Giris_Tarihi)";
                 KayitIslemi(sorgu);
                 Temizle();
@@ -56,7 +56,7 @@ namespace Optikci_Otomasyonu
             cmd.Parameters.AddWithValue("@Personel_Soyad",txtSoyad.Text);
             cmd.Parameters.AddWithValue("@Personel_Meslek", cbbMeslegi.SelectedItem.ToString());
             cmd.Parameters.AddWithValue("@Personel_Maas", nudMaas.Value);
-            cmd.Parameters.AddWithValue("@Personel_Giris_Tarihi", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+            cmd.Parameters.AddWithValue("@Personel_Giris_Tarihi", DateTime.Now);
             baglan.Open();
             cmd.ExecuteNonQuery();
             baglan.Close();

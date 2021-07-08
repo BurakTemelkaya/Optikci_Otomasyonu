@@ -45,13 +45,14 @@ namespace Optikci_Otomasyonu
             DateTime tarih;
             DateTime baslangic = Convert.ToDateTime(dtpBitis.Value);
             DateTime bitis = Convert.ToDateTime(dtpBaslangic.Value);
-            baglan.Open();
+            
             SqlCommand komut = new SqlCommand("Select ur.Urun_Adi,ur.Urun_Fiyati,sa.Satis_Fiyati," +
             "sa.Satilan_Stok_Adedi,sa.Satan_Kisi_ID,sa.Satilma_Zamani" +
             " from Urunler ur" +
             " inner join Satilan_Urunler sa on ur.ID = sa.Satilan_Urun_ID " +
             "where sa.Satilma_Zamani between '" + dtpBaslangic.Value.ToString("yyyy-MM-dd") + "' " +
             " and '" + dtpBitis.Value.ToString("yyyy-MM-dd") + "' order by sa.Satilma_Zamani ASC", baglan.baglanti());
+            baglan.Open();
             SqlDataReader oku = komut.ExecuteReader();
             while (oku.Read())
             {
@@ -67,13 +68,18 @@ namespace Optikci_Otomasyonu
                 kar = (satisFiyat - alisFiyat) * adet;
                 toplamBrut += brut;
                 toplamKar += kar;
-                chart1.Series["Brüt Gelir"].Points.AddXY(tarih.ToString("dd-MM-yyyy HH:mm"), brut);
-                chart1.Series["Kâr"].Points.AddXY(tarih.ToString("dd-MM-yyyy HH:mm"), kar);                
+                chart1.Series["Brüt Gelir"].Points.AddXY(tarih.ToString("dd-MM-yyyy HH:mm") + " " + UrununAdi, brut);
+                chart1.Series["Kâr"].Points.AddXY(tarih.ToString("dd-MM-yyyy HH:mm") + " " + UrununAdi, kar);                
                 toplamUrun++;
             }
-            lblBrutGelir.Text = toplamBrut.ToString();
-            lblToplamKar.Text = toplamKar.ToString();
-            lblTopSatis.Text = topSatis.ToString();
+            if (toplamUrun>0)
+            {
+                lblBrutGelir.Text = toplamBrut.ToString();
+                lblToplamKar.Text = toplamKar.ToString();
+                lblTopSatis.Text = topSatis.ToString();
+                lblOrtalamaKar.Text = (toplamKar / toplamUrun).ToString();
+            }
+            
             baglan.Close();
         }
 
