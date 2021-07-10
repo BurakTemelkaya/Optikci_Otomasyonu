@@ -51,7 +51,7 @@ namespace Optikci_Otomasyonu
             this.personelListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStriptxtUrunAra = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSifirla = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStokSayisi)).BeginInit();
@@ -73,7 +73,7 @@ namespace Optikci_Otomasyonu
             this.txtAdi.Location = new System.Drawing.Point(182, 300);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(623, 26);
-            this.txtAdi.TabIndex = 2;
+            this.txtAdi.TabIndex = 1;
             this.txtAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -100,7 +100,7 @@ namespace Optikci_Otomasyonu
             this.txtDetay.Multiline = true;
             this.txtDetay.Name = "txtDetay";
             this.txtDetay.Size = new System.Drawing.Size(623, 121);
-            this.txtDetay.TabIndex = 8;
+            this.txtDetay.TabIndex = 4;
             this.txtDetay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -118,7 +118,7 @@ namespace Optikci_Otomasyonu
             this.btnGuncelle.Location = new System.Drawing.Point(500, 858);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(305, 41);
-            this.btnGuncelle.TabIndex = 9;
+            this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -144,7 +144,7 @@ namespace Optikci_Otomasyonu
             0});
             this.nudFiyati.Name = "nudFiyati";
             this.nudFiyati.Size = new System.Drawing.Size(623, 30);
-            this.nudFiyati.TabIndex = 32;
+            this.nudFiyati.TabIndex = 2;
             this.nudFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudFiyati.ThousandsSeparator = true;
             // 
@@ -154,7 +154,7 @@ namespace Optikci_Otomasyonu
             this.nudStokSayisi.Location = new System.Drawing.Point(182, 451);
             this.nudStokSayisi.Name = "nudStokSayisi";
             this.nudStokSayisi.Size = new System.Drawing.Size(623, 30);
-            this.nudStokSayisi.TabIndex = 31;
+            this.nudStokSayisi.TabIndex = 3;
             this.nudStokSayisi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnResimDegistir
@@ -163,7 +163,7 @@ namespace Optikci_Otomasyonu
             this.btnResimDegistir.Location = new System.Drawing.Point(329, 858);
             this.btnResimDegistir.Name = "btnResimDegistir";
             this.btnResimDegistir.Size = new System.Drawing.Size(165, 41);
-            this.btnResimDegistir.TabIndex = 33;
+            this.btnResimDegistir.TabIndex = 6;
             this.btnResimDegistir.Text = "Resmi Değiştir";
             this.btnResimDegistir.UseVisualStyleBackColor = false;
             this.btnResimDegistir.Click += new System.EventHandler(this.btnResimDegistir_Click);
@@ -174,7 +174,7 @@ namespace Optikci_Otomasyonu
             this.btnSil.Location = new System.Drawing.Point(182, 858);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(141, 41);
-            this.btnSil.TabIndex = 34;
+            this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -203,7 +203,7 @@ namespace Optikci_Otomasyonu
             this.personelListeleGuncelleToolStripMenuItem,
             this.cikisYapToolStripMenuItem,
             this.toolStriptxtUrunAra,
-            this.toolStripMenuItem1});
+            this.toolStripSifirla});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(966, 27);
@@ -225,8 +225,8 @@ namespace Optikci_Otomasyonu
             // urunSatislariniGosterToolStripMenuItem
             // 
             this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışları";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
@@ -243,8 +243,8 @@ namespace Optikci_Otomasyonu
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
-            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 23);
-            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(111, 23);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel İşlemleri";
             // 
             // cikisYapToolStripMenuItem
             // 
@@ -255,7 +255,6 @@ namespace Optikci_Otomasyonu
             // toolStriptxtUrunAra
             // 
             this.toolStriptxtUrunAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.toolStriptxtUrunAra.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStriptxtUrunAra.Name = "toolStriptxtUrunAra";
             this.toolStriptxtUrunAra.Size = new System.Drawing.Size(100, 23);
             this.toolStriptxtUrunAra.Text = "Ürün Ara";
@@ -263,12 +262,12 @@ namespace Optikci_Otomasyonu
             this.toolStriptxtUrunAra.Click += new System.EventHandler(this.toolStriptxtUrunAra_Click);
             this.toolStriptxtUrunAra.TextChanged += new System.EventHandler(this.toolStriptxtUrunAra_TextChanged);
             // 
-            // toolStripMenuItem1
+            // toolStripSifirla
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(48, 23);
-            this.toolStripMenuItem1.Text = "Sıfırla";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripSifirla.Name = "toolStripSifirla";
+            this.toolStripSifirla.Size = new System.Drawing.Size(48, 23);
+            this.toolStripSifirla.Text = "Sıfırla";
+            this.toolStripSifirla.Click += new System.EventHandler(this.toolStripSifirla_Click);
             // 
             // Urunler
             // 
@@ -294,7 +293,7 @@ namespace Optikci_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Urunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Urunler";
+            this.Text = "Ürun İşlemleri";
             this.Load += new System.EventHandler(this.Urunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFiyati)).EndInit();
@@ -329,7 +328,7 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripMenuItem urunEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem urunSatisGrafikleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStriptxtUrunAra;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripSifirla;
         private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
     }
 }

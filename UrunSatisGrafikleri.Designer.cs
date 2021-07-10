@@ -29,11 +29,11 @@ namespace Optikci_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.urunEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.urunleriListeleGuncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,8 +86,8 @@ namespace Optikci_Otomasyonu
             // urunleriListeleGuncelleToolStripMenuItem
             // 
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(148, 19);
-            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(92, 19);
+            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürun İşlemleri";
             // 
             // urunSatisiToolStripMenuItem
             // 
@@ -98,8 +98,8 @@ namespace Optikci_Otomasyonu
             // urunSatislariniGosterToolStripMenuItem
             // 
             this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 19);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(88, 19);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışları";
             // 
             // personelEKleToolStripMenuItem
             // 
@@ -110,8 +110,8 @@ namespace Optikci_Otomasyonu
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
-            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 19);
-            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(111, 19);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel İşlemleri";
             // 
             // cikisYapToolStripMenuItem
             // 
@@ -122,30 +122,30 @@ namespace Optikci_Otomasyonu
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(184)))), ((int)(((byte)(219)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(0, 29);
             this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series1.Legend = "Legend1";
-            series1.Name = "Kâr";
-            series1.YValuesPerPoint = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series2.Legend = "Legend1";
-            series2.Name = "Brüt Gelir";
-            series2.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series5.Legend = "Legend1";
+            series5.Name = "Kâr";
+            series5.YValuesPerPoint = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series6.Legend = "Legend1";
+            series6.Name = "Brüt Gelir";
+            series6.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(1233, 668);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
-            title1.Name = "Satış Zamanı";
-            this.chart1.Titles.Add(title1);
+            title3.Name = "Satış Zamanı";
+            this.chart1.Titles.Add(title3);
             // 
             // label1
             // 

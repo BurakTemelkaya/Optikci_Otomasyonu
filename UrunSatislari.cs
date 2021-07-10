@@ -33,9 +33,9 @@ namespace Optikci_Otomasyonu
         {
             string sorgu = "select ur.Urun_Adi as 'Ürun Adı', sa.Satis_Fiyati as 'Satış Fiyatı', " +
                 "sa.Satilan_Stok_Adedi as 'Satılan Stok Adedi',ur.Urun_Detay as 'Ürün Detay', " +
-                "ur.Urun_Fotograf as 'Ürünün Fotoğrafı',sa.Satilma_Zamani as 'Ürünün Satış Zamanı'," +
-                "ur.Urun_Fiyati as 'Ürün Alış Fiyatı' , " +
-                "pe.Personel_Adi + ' ' + pe.Personel_Soyad as 'Satışı Yapan Personel Adı' " +
+                "ur.Urun_Fotograf as 'Fotoğrafı',sa.Satilma_Zamani as 'Satış Zamanı'," +
+                "ur.Urun_Fiyati as 'Alış Fiyatı' , " +
+                "pe.Personel_Adi + ' ' + pe.Personel_Soyad as 'Satışı Yapan Personel' " +
                 "from Urunler ur " +
                 "inner join Satilan_Urunler sa on ur.ID = sa.Satilan_Urun_ID " +
                 "inner join Personeller pe on sa.Satan_Kisi_ID = pe.ID";

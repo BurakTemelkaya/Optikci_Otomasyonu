@@ -63,6 +63,7 @@ namespace Optikci_Otomasyonu
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunEkleToolStripMenuItem,
             this.urunleriListeleGuncelleToolStripMenuItem,
@@ -80,42 +81,50 @@ namespace Optikci_Otomasyonu
             // 
             // urunEkleToolStripMenuItem
             // 
+            this.urunEkleToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.urunEkleToolStripMenuItem.Name = "urunEkleToolStripMenuItem";
             this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(69, 19);
             this.urunEkleToolStripMenuItem.Text = "Ürün Ekle";
             // 
             // urunleriListeleGuncelleToolStripMenuItem
             // 
+            this.urunleriListeleGuncelleToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(148, 19);
-            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(92, 19);
+            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürun İşlemleri";
             // 
             // urunSatisiToolStripMenuItem
             // 
+            this.urunSatisiToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.urunSatisiToolStripMenuItem.Name = "urunSatisiToolStripMenuItem";
             this.urunSatisiToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
             this.urunSatisiToolStripMenuItem.Text = "Ürün Satışı";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
+            this.urunSatisGrafikleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.urunSatisGrafikleriToolStripMenuItem.Name = "urunSatisGrafikleriToolStripMenuItem";
             this.urunSatisGrafikleriToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
             this.urunSatisGrafikleriToolStripMenuItem.Text = "Ürün Satış Grafikleri";
             // 
             // personelEKleToolStripMenuItem
             // 
+            this.personelEKleToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.personelEKleToolStripMenuItem.Name = "personelEKleToolStripMenuItem";
             this.personelEKleToolStripMenuItem.Size = new System.Drawing.Size(89, 19);
             this.personelEKleToolStripMenuItem.Text = "Personel EKle";
             // 
             // personelListeleGuncelleToolStripMenuItem
             // 
+            this.personelListeleGuncelleToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
-            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 19);
-            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(111, 19);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel İşlemleri";
             // 
             // cikisYapToolStripMenuItem
             // 
+            this.cikisYapToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.cikisYapToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cikisYapToolStripMenuItem.Name = "cikisYapToolStripMenuItem";
             this.cikisYapToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
             this.cikisYapToolStripMenuItem.Text = "Çıkış Yap";
@@ -152,7 +161,7 @@ namespace Optikci_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(486, 431);
+            this.label2.Location = new System.Drawing.Point(467, 431);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 45;
@@ -170,7 +179,7 @@ namespace Optikci_Otomasyonu
             // lblSatisFiyati
             // 
             this.lblSatisFiyati.AutoSize = true;
-            this.lblSatisFiyati.Location = new System.Drawing.Point(600, 431);
+            this.lblSatisFiyati.Location = new System.Drawing.Point(581, 431);
             this.lblSatisFiyati.Name = "lblSatisFiyati";
             this.lblSatisFiyati.Size = new System.Drawing.Size(86, 20);
             this.lblSatisFiyati.TabIndex = 47;
@@ -179,7 +188,7 @@ namespace Optikci_Otomasyonu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(817, 431);
+            this.label3.Location = new System.Drawing.Point(824, 431);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 20);
             this.label3.TabIndex = 48;
@@ -188,7 +197,7 @@ namespace Optikci_Otomasyonu
             // lblSatilanStokAdedi
             // 
             this.lblSatilanStokAdedi.AutoSize = true;
-            this.lblSatilanStokAdedi.Location = new System.Drawing.Point(985, 431);
+            this.lblSatilanStokAdedi.Location = new System.Drawing.Point(1014, 431);
             this.lblSatilanStokAdedi.Name = "lblSatilanStokAdedi";
             this.lblSatilanStokAdedi.Size = new System.Drawing.Size(140, 20);
             this.lblSatilanStokAdedi.TabIndex = 49;
@@ -197,7 +206,7 @@ namespace Optikci_Otomasyonu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 495);
+            this.label4.Location = new System.Drawing.Point(31, 464);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 20);
             this.label4.TabIndex = 50;
@@ -205,7 +214,7 @@ namespace Optikci_Otomasyonu
             // 
             // lblUrunDetay
             // 
-            this.lblUrunDetay.Location = new System.Drawing.Point(141, 495);
+            this.lblUrunDetay.Location = new System.Drawing.Point(31, 495);
             this.lblUrunDetay.Name = "lblUrunDetay";
             this.lblUrunDetay.Size = new System.Drawing.Size(304, 223);
             this.lblUrunDetay.TabIndex = 51;
@@ -213,9 +222,9 @@ namespace Optikci_Otomasyonu
             // 
             // pbResim
             // 
-            this.pbResim.Location = new System.Drawing.Point(451, 495);
+            this.pbResim.Location = new System.Drawing.Point(379, 495);
             this.pbResim.Name = "pbResim";
-            this.pbResim.Size = new System.Drawing.Size(307, 223);
+            this.pbResim.Size = new System.Drawing.Size(405, 223);
             this.pbResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbResim.TabIndex = 52;
             this.pbResim.TabStop = false;
@@ -232,16 +241,16 @@ namespace Optikci_Otomasyonu
             // lblSatisZamani
             // 
             this.lblSatisZamani.AutoSize = true;
-            this.lblSatisZamani.Location = new System.Drawing.Point(961, 698);
+            this.lblSatisZamani.Location = new System.Drawing.Point(1014, 698);
             this.lblSatisZamani.Name = "lblSatisZamani";
-            this.lblSatisZamani.Size = new System.Drawing.Size(106, 20);
+            this.lblSatisZamani.Size = new System.Drawing.Size(102, 20);
             this.lblSatisZamani.TabIndex = 54;
-            this.lblSatisZamani.Text = "Satış Zamanı:";
+            this.lblSatisZamani.Text = "Satış Zamanı";
             // 
             // lblBrutGelir
             // 
             this.lblBrutGelir.AutoSize = true;
-            this.lblBrutGelir.Location = new System.Drawing.Point(961, 495);
+            this.lblBrutGelir.Location = new System.Drawing.Point(1014, 495);
             this.lblBrutGelir.Name = "lblBrutGelir";
             this.lblBrutGelir.Size = new System.Drawing.Size(76, 20);
             this.lblBrutGelir.TabIndex = 56;
@@ -259,7 +268,7 @@ namespace Optikci_Otomasyonu
             // lblKar
             // 
             this.lblKar.AutoSize = true;
-            this.lblKar.Location = new System.Drawing.Point(961, 554);
+            this.lblKar.Location = new System.Drawing.Point(1014, 554);
             this.lblKar.Name = "lblKar";
             this.lblKar.Size = new System.Drawing.Size(33, 20);
             this.lblKar.TabIndex = 58;
@@ -277,7 +286,7 @@ namespace Optikci_Otomasyonu
             // lblSatanKisi
             // 
             this.lblSatanKisi.AutoSize = true;
-            this.lblSatanKisi.Location = new System.Drawing.Point(961, 623);
+            this.lblSatanKisi.Location = new System.Drawing.Point(1014, 623);
             this.lblSatanKisi.Name = "lblSatanKisi";
             this.lblSatanKisi.Size = new System.Drawing.Size(80, 20);
             this.lblSatanKisi.TabIndex = 60;
@@ -322,7 +331,7 @@ namespace Optikci_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UrunSatislari";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UrunSatislari";
+            this.Text = "Ürün Satışları";
             this.Load += new System.EventHandler(this.UrunSatislari_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

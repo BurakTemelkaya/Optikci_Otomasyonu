@@ -89,14 +89,14 @@ namespace Optikci_Otomasyonu
             // urunleriListeleGuncelleToolStripMenuItem
             // 
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(148, 19);
-            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(92, 19);
+            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürun İşlemleri";
             // 
             // urunSatislariniGosterToolStripMenuItem
             // 
             this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 19);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(88, 19);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışları";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
@@ -113,8 +113,8 @@ namespace Optikci_Otomasyonu
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
-            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 19);
-            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(111, 19);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel İşlemleri";
             // 
             // cikisYapToolStripMenuItem
             // 
@@ -136,7 +136,7 @@ namespace Optikci_Otomasyonu
             0});
             this.nudFiyati.Name = "nudFiyati";
             this.nudFiyati.Size = new System.Drawing.Size(467, 30);
-            this.nudFiyati.TabIndex = 41;
+            this.nudFiyati.TabIndex = 9;
             this.nudFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudFiyati.ThousandsSeparator = true;
             // 
@@ -148,7 +148,7 @@ namespace Optikci_Otomasyonu
             this.nudStokSayisi.Location = new System.Drawing.Point(55, 478);
             this.nudStokSayisi.Name = "nudStokSayisi";
             this.nudStokSayisi.Size = new System.Drawing.Size(467, 30);
-            this.nudStokSayisi.TabIndex = 40;
+            this.nudStokSayisi.TabIndex = 8;
             this.nudStokSayisi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pbResim
@@ -168,7 +168,7 @@ namespace Optikci_Otomasyonu
             this.txtDetay.Multiline = true;
             this.txtDetay.Name = "txtDetay";
             this.txtDetay.Size = new System.Drawing.Size(473, 164);
-            this.txtDetay.TabIndex = 38;
+            this.txtDetay.TabIndex = 11;
             this.txtDetay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -183,7 +183,7 @@ namespace Optikci_Otomasyonu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(197, 443);
+            this.label3.Location = new System.Drawing.Point(213, 443);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 20);
             this.label3.TabIndex = 36;
@@ -196,13 +196,13 @@ namespace Optikci_Otomasyonu
             this.txtAdi.Location = new System.Drawing.Point(53, 394);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(469, 26);
-            this.txtAdi.TabIndex = 34;
+            this.txtAdi.TabIndex = 6;
             this.txtAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 358);
+            this.label1.Location = new System.Drawing.Point(240, 358);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 33;
@@ -224,7 +224,7 @@ namespace Optikci_Otomasyonu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(203, 524);
+            this.label5.Location = new System.Drawing.Point(215, 524);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 20);
             this.label5.TabIndex = 43;
@@ -233,7 +233,7 @@ namespace Optikci_Otomasyonu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(708, 524);
+            this.label6.Location = new System.Drawing.Point(726, 524);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 20);
             this.label6.TabIndex = 46;
@@ -246,13 +246,13 @@ namespace Optikci_Otomasyonu
             this.nudSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nudSatisFiyati.Location = new System.Drawing.Point(573, 556);
             this.nudSatisFiyati.Maximum = new decimal(new int[] {
-            10000000,
+            1000000,
             0,
             0,
             0});
             this.nudSatisFiyati.Name = "nudSatisFiyati";
             this.nudSatisFiyati.Size = new System.Drawing.Size(467, 30);
-            this.nudSatisFiyati.TabIndex = 45;
+            this.nudSatisFiyati.TabIndex = 10;
             this.nudSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudSatisFiyati.ThousandsSeparator = true;
             // 
@@ -274,13 +274,13 @@ namespace Optikci_Otomasyonu
             this.nudSatilacakStokSayisi.Location = new System.Drawing.Point(573, 478);
             this.nudSatilacakStokSayisi.Name = "nudSatilacakStokSayisi";
             this.nudSatilacakStokSayisi.Size = new System.Drawing.Size(467, 30);
-            this.nudSatilacakStokSayisi.TabIndex = 51;
+            this.nudSatilacakStokSayisi.TabIndex = 1;
             this.nudSatilacakStokSayisi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(708, 443);
+            this.label8.Location = new System.Drawing.Point(722, 443);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(156, 20);
             this.label8.TabIndex = 50;
@@ -292,13 +292,13 @@ namespace Optikci_Otomasyonu
             this.txtSatilacakMusterininAdi.Location = new System.Drawing.Point(573, 394);
             this.txtSatilacakMusterininAdi.Name = "txtSatilacakMusterininAdi";
             this.txtSatilacakMusterininAdi.Size = new System.Drawing.Size(467, 26);
-            this.txtSatilacakMusterininAdi.TabIndex = 49;
+            this.txtSatilacakMusterininAdi.TabIndex = 7;
             this.txtSatilacakMusterininAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(708, 358);
+            this.label9.Location = new System.Drawing.Point(715, 358);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(178, 20);
             this.label9.TabIndex = 48;

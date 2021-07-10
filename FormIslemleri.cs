@@ -8,6 +8,7 @@ namespace Optikci_Otomasyonu
 {
     public class FormIslemleri
     {
+        //MESLEKLER
         //Müdür
         //Müdür Yardımcısı
         //Satış Müdürü
@@ -18,15 +19,21 @@ namespace Optikci_Otomasyonu
         //Pazarlama Uzmanı
         //İnsan Kaynakları Müdürü
         //İnsan Kaynakları Uzmanı
-        public static Form ClosingForm;//kapatılacak form
-        public static string Meslek;
+
+        //değişkenleri ve metodları static tutmamızın sebebi değerin sabit kalması
+        //veya diğer formlarda kullanırken yeni bir FormIslemleri nesnesi oluşturmamıza gerek kalmaması
+        //avantajlarını kullanmak.
+        public static Form ClosingForm;//kapatılacak yada şu an açık olan form
+        public static string Meslek;//personelin mesleği
         public static void PersonellerOpen(object s, EventArgs e)
         {
+            //yetki işlemleri
             if (Meslek == "Müdür" || Meslek == "Müdür Yardımcısı" || Meslek == "Satış Müdürü" || Meslek == "Satış Müdür Yardımcısı" || Meslek == "İnsan Kaynakları Müdürü" || Meslek == "İnsan Kaynakları Uzmanı")
             {
                 FormHide();
                 Personeller personeller = new Personeller();
-                ClosingForm = personeller;
+                //başka forma geçtiğimizde geçtiğimiz formun bilgisini alıyoruz
+                ClosingForm = personeller;//bu sayede hangi formda olduğumuzu anlayıp o formu kapatma işlemi yapıyoruz.
                 personeller.Show();
             }
             else
@@ -86,15 +93,18 @@ namespace Optikci_Otomasyonu
         }
         public static void Close(object s, EventArgs e)
         {
+            //uygulamayı tamamen kapatma
             Application.Exit();
         }
         public static void FormClosing(object s, FormClosingEventArgs e)
         {
+            //formların formClosing eventi için ayrı bir metod kullandık
             Application.Exit();
         }
         public static void FormHide()
         {
-            ClosingForm.Hide();
+            //ClosingForm.Hide();
+            ClosingForm.Dispose();//ram leak olmaması ve formu kapatmak için dispose metodunu kullandım
         }
     }
 }

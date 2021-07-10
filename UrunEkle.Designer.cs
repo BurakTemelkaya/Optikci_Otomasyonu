@@ -84,7 +84,7 @@ namespace Optikci_Otomasyonu
             this.btnTemizle.Location = new System.Drawing.Point(549, 842);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(244, 41);
-            this.btnTemizle.TabIndex = 32;
+            this.btnTemizle.TabIndex = 7;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
@@ -111,7 +111,7 @@ namespace Optikci_Otomasyonu
             0});
             this.nudFiyati.Name = "nudFiyati";
             this.nudFiyati.Size = new System.Drawing.Size(623, 30);
-            this.nudFiyati.TabIndex = 30;
+            this.nudFiyati.TabIndex = 2;
             this.nudFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudFiyati.ThousandsSeparator = true;
             // 
@@ -122,7 +122,7 @@ namespace Optikci_Otomasyonu
             this.nudStokSayisi.Location = new System.Drawing.Point(170, 286);
             this.nudStokSayisi.Name = "nudStokSayisi";
             this.nudStokSayisi.Size = new System.Drawing.Size(623, 30);
-            this.nudStokSayisi.TabIndex = 29;
+            this.nudStokSayisi.TabIndex = 3;
             this.nudStokSayisi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnResimEkle
@@ -131,7 +131,7 @@ namespace Optikci_Otomasyonu
             this.btnResimEkle.Location = new System.Drawing.Point(241, 775);
             this.btnResimEkle.Name = "btnResimEkle";
             this.btnResimEkle.Size = new System.Drawing.Size(487, 41);
-            this.btnResimEkle.TabIndex = 28;
+            this.btnResimEkle.TabIndex = 5;
             this.btnResimEkle.Text = "Resim Ekle";
             this.btnResimEkle.UseVisualStyleBackColor = false;
             this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click);
@@ -152,7 +152,7 @@ namespace Optikci_Otomasyonu
             this.btnUrunEkle.Location = new System.Drawing.Point(170, 842);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(373, 41);
-            this.btnUrunEkle.TabIndex = 27;
+            this.btnUrunEkle.TabIndex = 6;
             this.btnUrunEkle.Text = "Ürün Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = false;
             this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
@@ -164,7 +164,7 @@ namespace Optikci_Otomasyonu
             this.txtDetay.Multiline = true;
             this.txtDetay.Name = "txtDetay";
             this.txtDetay.Size = new System.Drawing.Size(623, 121);
-            this.txtDetay.TabIndex = 26;
+            this.txtDetay.TabIndex = 4;
             this.txtDetay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -200,7 +200,7 @@ namespace Optikci_Otomasyonu
             this.txtAdi.Location = new System.Drawing.Point(170, 119);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(623, 26);
-            this.txtAdi.TabIndex = 20;
+            this.txtAdi.TabIndex = 1;
             this.txtAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -231,8 +231,8 @@ namespace Optikci_Otomasyonu
             // urunleriListeleGuncelleToolStripMenuItem
             // 
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(148, 20);
-            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle";
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri İşlemleri";
             // 
             // urunSatisiToolStripMenuItem
             // 
@@ -243,8 +243,8 @@ namespace Optikci_Otomasyonu
             // urunSatislariniGosterToolStripMenuItem
             // 
             this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışları";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
@@ -261,8 +261,8 @@ namespace Optikci_Otomasyonu
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
-            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
-            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Sil/Güncelle";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel İşlemleri";
             // 
             // cikisYapToolStripMenuItem
             // 

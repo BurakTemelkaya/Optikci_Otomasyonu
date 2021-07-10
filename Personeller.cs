@@ -130,5 +130,28 @@ namespace Optikci_Otomasyonu
         {
             PersonelleriListele();
         }
+
+        private void btnPersonelSil_Click(object sender, EventArgs e)
+        {
+            if (ID != 0)
+            {
+                string s = "delete from Personeller where ID = '" + ID + "'";
+                SqlCommand cmd = new SqlCommand(s, baglan.baglanti());
+                DialogResult c = new DialogResult();
+                c = MessageBox.Show("Personeli Silmek istediğinizden emin misiniz ?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (c == DialogResult.Yes)
+                {
+                    baglan.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Personel Silindi");
+                    baglan.Close();
+                    PersonelleriListele();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Silinecek Personeli Seçiniz");
+            }
+        }
     }
 }

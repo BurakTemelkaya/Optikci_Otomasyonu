@@ -53,6 +53,7 @@ namespace Optikci_Otomasyonu
             this.cikisYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTxtPersonelAra = new System.Windows.Forms.ToolStripTextBox();
             this.sifirlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPersonelSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -60,11 +61,11 @@ namespace Optikci_Otomasyonu
             // 
             // btnPersonelGuncelle
             // 
-            this.btnPersonelGuncelle.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPersonelGuncelle.Location = new System.Drawing.Point(380, 642);
+            this.btnPersonelGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(199)))), ((int)(((byte)(204)))));
+            this.btnPersonelGuncelle.Location = new System.Drawing.Point(360, 642);
             this.btnPersonelGuncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPersonelGuncelle.Name = "btnPersonelGuncelle";
-            this.btnPersonelGuncelle.Size = new System.Drawing.Size(244, 60);
+            this.btnPersonelGuncelle.Size = new System.Drawing.Size(587, 60);
             this.btnPersonelGuncelle.TabIndex = 21;
             this.btnPersonelGuncelle.Text = "Personeli Güncelle";
             this.btnPersonelGuncelle.UseVisualStyleBackColor = false;
@@ -216,6 +217,7 @@ namespace Optikci_Otomasyonu
             this.dgvDegerler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(173)))), ((int)(((byte)(47)))));
             this.dgvDegerler.ColumnHeadersHeight = 30;
             this.dgvDegerler.Location = new System.Drawing.Point(27, 45);
+            this.dgvDegerler.MultiSelect = false;
             this.dgvDegerler.Name = "dgvDegerler";
             this.dgvDegerler.ReadOnly = true;
             this.dgvDegerler.Size = new System.Drawing.Size(945, 379);
@@ -255,8 +257,8 @@ namespace Optikci_Otomasyonu
             // urunleriListeleGuncelleToolStripMenuItem
             // 
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(165, 23);
-            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle/Sil";
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(108, 23);
+            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri İşlemleri";
             // 
             // urunSatisiToolStripMenuItem
             // 
@@ -267,8 +269,8 @@ namespace Optikci_Otomasyonu
             // urunSatislariniGosterToolStripMenuItem
             // 
             this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışları";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
@@ -299,12 +301,25 @@ namespace Optikci_Otomasyonu
             this.sifirlaToolStripMenuItem.Text = "Sıfırla";
             this.sifirlaToolStripMenuItem.Click += new System.EventHandler(this.sifirlaToolStripMenuItem_Click);
             // 
+            // btnPersonelSil
+            // 
+            this.btnPersonelSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPersonelSil.Location = new System.Drawing.Point(32, 642);
+            this.btnPersonelSil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPersonelSil.Name = "btnPersonelSil";
+            this.btnPersonelSil.Size = new System.Drawing.Size(283, 60);
+            this.btnPersonelSil.TabIndex = 38;
+            this.btnPersonelSil.Text = "Personeli Sil";
+            this.btnPersonelSil.UseVisualStyleBackColor = false;
+            this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(95)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(984, 716);
+            this.Controls.Add(this.btnPersonelSil);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvDegerler);
             this.Controls.Add(this.btnPersonelGuncelle);
@@ -324,7 +339,7 @@ namespace Optikci_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Personeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Personeller";
+            this.Text = "Personel İşlemleri";
             this.Load += new System.EventHandler(this.Personeller_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudMaas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDegerler)).EndInit();
@@ -360,5 +375,6 @@ namespace Optikci_Otomasyonu
         private System.Windows.Forms.ToolStripTextBox toolStripTxtPersonelAra;
         private System.Windows.Forms.ToolStripMenuItem sifirlaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem urunSatislariniGosterToolStripMenuItem;
+        private System.Windows.Forms.Button btnPersonelSil;
     }
 }

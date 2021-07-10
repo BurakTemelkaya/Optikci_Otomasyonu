@@ -35,10 +35,11 @@ namespace Optikci_Otomasyonu
         }
         private void UrunleriListele()
         {
-            string sorgu = "select ID, Urun_Adi as 'Ürun Adı',Urun_Fiyati as 'Ürün Fiyatı'," +
-                "Urun_Stok_Sayisi as 'Ürünün Stok Sayısı',Urun_Detay as 'Ürün Detay'," +
-                "Urun_Fotograf as 'Ürünün Fotoğrafı',Urun_Eklenme_Tarihi as 'Ürünün Eklenme Tarihi'," +
-                "Urun_Guncellenme_Tarihi as 'Ürünün Güncellenme Tarihi' from Urunler";
+            //bütün ürünleri listeleme sorgusu
+            string sorgu = "select ID, Urun_Adi as 'Ürun Adı',Urun_Fiyati as 'Fiyatı'," +
+                "Urun_Stok_Sayisi as 'Stok Sayısı',Urun_Detay as 'Detay'," +
+                "Urun_Fotograf as 'Ürünün Fotoğrafı',Urun_Eklenme_Tarihi as 'Eklenme Tarihi'," +
+                "Urun_Guncellenme_Tarihi as 'Güncellenme Tarihi' from Urunler";
             Listele(sorgu);
         }
         private void Listele(string sorgu)
@@ -53,11 +54,11 @@ namespace Optikci_Otomasyonu
             }
             baglan.Close();
         }
-        int ID;
+        private int ID;
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (ID != 0 && txtAdi.Text!="" && txtDetay.Text!="")
+            if (ID != 0 && txtAdi.Text != "" && txtDetay.Text != "")
             {
                 string s = "update Urunler set Urun_Adi=@Urun_Adi,Urun_Fiyati=@Urun_Fiyati," +
                 "Urun_Stok_Sayisi=@Urun_Stok_Sayisi,Urun_Detay=@Urun_Detay,Urun_Fotograf=@Urun_Fotograf," +
@@ -83,6 +84,7 @@ namespace Optikci_Otomasyonu
                 baglan.Close();
                 MessageBox.Show("Güncelleme İşlemi Başarılı");
                 UrunleriListele();
+                Temizle();
             }
             else
             {
@@ -93,30 +95,38 @@ namespace Optikci_Otomasyonu
         private void btnResimDegistir_Click(object sender, EventArgs e)
         {
             OpenFileDialog resim = new OpenFileDialog();
-            resim.Filter = "Tüm dosyalar | *.*";
+            resim.Filter = "Resim Dosyaları(*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (resim.ShowDialog() == DialogResult.OK)//dosya seçildi mi ?
             {
                 pbResim.ImageLocation = resim.FileName;
                 ResimDegistiMi = true;
-            }            
+            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            ResmiSil(EskiResimYolu);
-            string s = "delete from Urunler where ID = '" + ID + "'";
-            SqlCommand cmd = new SqlCommand(s, baglan.baglanti());
-            DialogResult c = new DialogResult();
-            c = MessageBox.Show("Ürünü Silmek istediğinizden emin misiniz ?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (c == DialogResult.Yes)
+            if (ID != 0)
             {
-                baglan.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Ürün Silindi");
-                baglan.Close();
+                ResmiSil(EskiResimYolu);
+                string s = "delete from Urunler where ID = '" + ID + "'";
+                SqlCommand cmd = new SqlCommand(s, baglan.baglanti());
+                DialogResult c = new DialogResult();
+                c = MessageBox.Show("Ürünü Silmek istediğinizden emin misiniz ?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (c == DialogResult.Yes)
+                {
+                    baglan.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Ürün Silindi");
+                    baglan.Close();
+                    Temizle();                    
+                }
+                pbResim.Image = null;
+                UrunleriListele();
             }
-            pbResim.Image = null;
-            UrunleriListele();
+            else
+            {
+                MessageBox.Show("Lütfen Silinecek Ürünü Seçiniz");
+            }
         }
 
         private void personelEKleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,11 +177,12 @@ namespace Optikci_Otomasyonu
         }
         private void ResmiSil(string eskiResim)
         {
-            File.Delete(eskiResim);//resmi sildirme
+            File.Delete(Application.StartupPath + eskiResim);//resmi sildirme
         }
 
         private void toolStriptxtUrunAra_TextChanged(object sender, EventArgs e)
         {
+            //ürün adına göre listeleme sorgusu
             string sorgu = "select ID, Urun_Adi as 'Ürun Adı',Urun_Fiyati as 'Ürün Fiyatı'," +
                 "Urun_Stok_Sayisi as 'Ürünün Stok Sayısı',Urun_Detay as 'Ürün Detay'," +
                 "Urun_Fotograf as 'Ürünün Fotoğrafı',Urun_Eklenme_Tarihi as 'Ürünün Eklenme Tarihi'," +
@@ -185,7 +196,7 @@ namespace Optikci_Otomasyonu
             toolStriptxtUrunAra.Text = "Ürün Ara";
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void toolStripSifirla_Click(object sender, EventArgs e)
         {
             UrunleriListele();
         }
@@ -193,6 +204,15 @@ namespace Optikci_Otomasyonu
         private void toolStriptxtUrunAra_Click(object sender, EventArgs e)
         {
             toolStriptxtUrunAra.Clear();
+        }
+        private void Temizle()
+        {
+            txtAdi.Clear();
+            txtDetay.Clear();
+            nudFiyati.Value = 0;
+            nudStokSayisi.Value = 0;
+            pbResim.Image = null;
+            ID = 0;
         }
     }
 }

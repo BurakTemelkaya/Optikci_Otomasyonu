@@ -102,10 +102,16 @@ namespace Optikci_Otomasyonu
             // 
             this.nudMaas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(172)))), ((int)(((byte)(126)))));
             this.nudMaas.Location = new System.Drawing.Point(743, 266);
+            this.nudMaas.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudMaas.Name = "nudMaas";
             this.nudMaas.Size = new System.Drawing.Size(277, 26);
             this.nudMaas.TabIndex = 6;
             this.nudMaas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudMaas.ThousandsSeparator = true;
             // 
             // label7
             // 
@@ -245,8 +251,8 @@ namespace Optikci_Otomasyonu
             // urunleriListeleGuncelleToolStripMenuItem
             // 
             this.urunleriListeleGuncelleToolStripMenuItem.Name = "urunleriListeleGuncelleToolStripMenuItem";
-            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
-            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri Listele/Güncelle/Sil";
+            this.urunleriListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.urunleriListeleGuncelleToolStripMenuItem.Text = "Ürunleri İşlemleri";
             // 
             // urunSatisiToolStripMenuItem
             // 
@@ -257,8 +263,8 @@ namespace Optikci_Otomasyonu
             // urunSatislariniGosterToolStripMenuItem
             // 
             this.urunSatislariniGosterToolStripMenuItem.Name = "urunSatislariniGosterToolStripMenuItem";
-            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
-            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışlarını Göster";
+            this.urunSatislariniGosterToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.urunSatislariniGosterToolStripMenuItem.Text = "Ürün Satışları";
             // 
             // urunSatisGrafikleriToolStripMenuItem
             // 
@@ -269,8 +275,8 @@ namespace Optikci_Otomasyonu
             // personelListeleGuncelleToolStripMenuItem
             // 
             this.personelListeleGuncelleToolStripMenuItem.Name = "personelListeleGuncelleToolStripMenuItem";
-            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
-            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel Listele/Güncelle/Sil";
+            this.personelListeleGuncelleToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.personelListeleGuncelleToolStripMenuItem.Text = "Personel İşlemleri";
             // 
             // cikisYapToolStripMenuItem
             // 
@@ -290,7 +296,7 @@ namespace Optikci_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PersonelEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PersonelEkle";
+            this.Text = "Personel Ekle";
             this.Load += new System.EventHandler(this.PersonelEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

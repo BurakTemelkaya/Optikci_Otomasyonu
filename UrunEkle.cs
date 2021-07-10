@@ -20,11 +20,13 @@ namespace Optikci_Otomasyonu
         SqlBaglantisi baglan = new SqlBaglantisi();
         string resimYolu;
         private void btnResimEkle_Click(object sender, EventArgs e)
-        {
+        {            
             OpenFileDialog resim = new OpenFileDialog();
-            resim.Filter = "Tüm dosyalar | *.*";
-            resim.ShowDialog();
-            pbResim.ImageLocation = resim.FileName;
+            resim.Filter = "Resim Dosyaları(*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (resim.ShowDialog() == DialogResult.OK)//dosya seçildi mi ?
+            {                
+                pbResim.ImageLocation = resim.FileName;
+            }
         }
         //@"~Resimler\
         private void btnUrunEkle_Click(object sender, EventArgs e)

@@ -31,10 +31,10 @@ namespace Optikci_Otomasyonu
         }
         private void UrunleriListele()
         {
-            string sorgu = "select ID, Urun_Adi as 'Ürun Adı',Urun_Fiyati as 'Ürün Fiyatı'," +
-                "Urun_Stok_Sayisi as 'Ürünün Stok Sayısı',Urun_Detay as 'Ürün Detay'," +
-                "Urun_Fotograf as 'Ürünün Fotoğrafı',Urun_Eklenme_Tarihi as 'Ürünün Eklenme Tarihi'," +
-                "Urun_Guncellenme_Tarihi as 'Ürünün Güncellenme Tarihi' from Urunler";
+            string sorgu = "select ID, Urun_Adi as 'Ürun Adı',Urun_Fiyati as 'Fiyatı'," +
+                "Urun_Stok_Sayisi as 'Stok Sayısı',Urun_Detay as 'Detay'," +
+                "Urun_Fotograf as 'Fotoğrafı',Urun_Eklenme_Tarihi as 'Eklenme Tarihi'," +
+                "Urun_Guncellenme_Tarihi as 'Güncellenme Tarihi' from Urunler";
             SqlDataAdapter adp = new SqlDataAdapter(sorgu, baglan.baglanti());
             DataSet ds = new DataSet();
             baglan.Open();
